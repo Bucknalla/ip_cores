@@ -26,12 +26,40 @@ module Pilot_Top(
     input [31:0] signal_in, 
     input [4:0] frame_size,
     input [3:0] pilot_interval,
-    output [31:0] signal_out,
+    input [31:0] pilot_value,
+    output reg [31:0] signal_out,
     output reg ready,
     output reg valid,
-    output reg error
+    output reg error,
+    output reg pilot_inserted
 );
 
+reg [4:0] cnt = 0;
+
+always @ (posedge clk) begin
+    if(rst) begin
+        cnt <= 0;
+        ready <= 0;
+        valid <= 0;
+        error <= 0;
+    end
+    else begin
+        valid <= 1;
+        if(cnt >= pilot_interval) begin
+            cnt <= 0;
+            ready <= 0;
+            signal_out <= pilot_value;
+            pilot_inserted <= 1;
+        end
+        else
+            pilot_inserted <= 0;
+            ready <= 1;
+            cnt <= cnt + 1;
+            signal_out <= signal_in;
+        end
+
+
+end
 
 
 endmodule

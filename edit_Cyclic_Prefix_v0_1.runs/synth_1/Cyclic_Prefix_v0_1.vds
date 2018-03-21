@@ -1,0 +1,648 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Wed Mar 21 11:42:46 2018
+# Process ID: 9586
+# Current directory: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1
+# Command line: vivado -log Cyclic_Prefix_v0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Cyclic_Prefix_v0_1.tcl
+# Log file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/Cyclic_Prefix_v0_1.vds
+# Journal file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Cyclic_Prefix_v0_1.tcl -notrace
+Command: synth_design -top Cyclic_Prefix_v0_1 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9590 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Cyclic_Prefix_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Cyclic_Prefix_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:64]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1125.770 ; gain = 195.305 ; free physical = 7711 ; free virtual = 27250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_S00_AXI' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-638] synthesizing module 'CP_Top' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/CP_Top.v:23]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_0' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_0' (1#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-4471] merging register 'valid_reg' into 'ready_reg' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/CP_Top.v:52]
+INFO: [Synth 8-4471] merging register 'ena_reg' into 'ready_reg' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/CP_Top.v:54]
+INFO: [Synth 8-256] done synthesizing module 'CP_Top' (2#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/CP_Top.v:23]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 2 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_S00_AXI' (3#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_S00_AXIS' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:4]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter NUMBER_OF_INPUT_WORDS bound to: 8 - type: integer 
+	Parameter bit_num bound to: 3 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WRITE_FIFO bound to: 2'b01 
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 4 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_S00_AXIS' (4#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:4]
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+	Parameter NUMBER_OF_OUTPUT_WORDS bound to: 8 - type: integer 
+	Parameter WAIT_COUNT_BITS bound to: 5 - type: integer 
+	Parameter bit_num bound to: 4 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter INIT_COUNTER bound to: 2'b01 
+	Parameter SEND_STREAM bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:106]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 2 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' (5#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 3 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1' (6#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:4]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[31]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[30]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[29]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[28]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[27]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[26]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[25]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[24]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[23]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[22]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[21]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[20]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[19]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[18]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[17]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[16]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[15]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[14]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[13]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[12]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[11]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[10]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[9]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[8]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[7]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[6]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[5]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[4]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[3]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[2]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[1]
+WARNING: [Synth 8-3331] design CP_Top has unconnected port cp_length[0]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXIS has unconnected port S_AXIS_TLAST
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXIS has unconnected port S_AXIS_TVALID
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1152.020 ; gain = 221.555 ; free physical = 7684 ; free virtual = 27224
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:rst to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[31] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[30] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[29] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[28] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[27] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[26] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[25] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[24] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[23] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[22] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[21] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[20] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[19] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[18] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[17] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[16] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[15] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[14] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[13] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[12] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[11] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[10] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[9] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[8] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[7] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[6] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[5] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[4] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[3] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[2] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[1] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[0] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[5] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[4] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[3] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[2] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[1] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[0] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:rst to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[31] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[30] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[29] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[28] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[27] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[26] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[25] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[24] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[23] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[22] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[21] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[20] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[19] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[18] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[17] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[16] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[15] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[14] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[13] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[12] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[11] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[10] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[9] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[8] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[7] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[6] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[5] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[4] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[3] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[2] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[1] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[0] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[5] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[4] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[3] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[2] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[1] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[0] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[31] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[30] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[29] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[28] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[27] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[26] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[25] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[24] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[23] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[22] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[21] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[20] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[19] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[18] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[17] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[16] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[15] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[14] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[13] to constant 0 [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1152.020 ; gain = 221.555 ; free physical = 7684 ; free virtual = 27224
+---------------------------------------------------------------------------------
+WARNING: [Project 1-560] Could not resolve non-primitive black box cell 'blk_mem_gen_0' instantiated as 'Cyclic_Prefix_v0_1_S00_AXI_inst/cp/bram'. 4 instances of this cell are unresolved black boxes. [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/Cyclic_Prefix_0.1/hdl/CP_Top.v:97]
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'Cyclic_Prefix_v0_1_S00_AXI_inst/cp/bram'
+Finished Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'Cyclic_Prefix_v0_1_S00_AXI_inst/cp/bram'
+Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/bram'
+Finished Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/bram'
+Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/bram'
+Finished Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/bram'
+Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'cp/bram'
+Finished Parsing XDC File [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/.Xil/Vivado-9586-Alex-Ubuntu/dcp/blk_mem_gen_0_in_context.xdc] for cell 'cp/bram'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1500.582 ; gain = 0.000 ; free physical = 7496 ; free virtual = 27036
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7495 ; free virtual = 27036
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7495 ; free virtual = 27036
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7495 ; free virtual = 27036
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7487 ; free virtual = 27029
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 4     
+	   2 Input      5 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 17    
+	               13 Bit    Registers := 4     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CP_Top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               13 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
+Module Cyclic_Prefix_v0_1_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 4     
+Module Cyclic_Prefix_v0_1_M00_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design Cyclic_Prefix_v0_1 has port m00_axis_tstrb[3] driven by constant 1
+WARNING: [Synth 8-3917] design Cyclic_Prefix_v0_1 has port m00_axis_tstrb[2] driven by constant 1
+WARNING: [Synth 8-3917] design Cyclic_Prefix_v0_1 has port m00_axis_tstrb[1] driven by constant 1
+WARNING: [Synth 8-3917] design Cyclic_Prefix_v0_1 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axi_arprot[0]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design Cyclic_Prefix_v0_1 has unconnected port s00_axis_tvalid
+INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cp/error_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\cp/cp_flag_reg )
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[30]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[29]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[28]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[27]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[26]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[25]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[24]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[23]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[22]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[21]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[20]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[19]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[18]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[17]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[16]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[15]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[14]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[13]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[12]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[11]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[10]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[9]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[8]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[7]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[6]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[5]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[4]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[3]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[2]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[1]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/cp_unload_reg[0]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[30]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[29]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[28]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[27]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[26]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[25]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[24]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[23]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[22]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[21]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[20]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[19]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[18]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[17]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[16]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[15]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[14]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[13]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[12]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[11]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[10]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[9]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[8]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[7]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[6]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[5]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[4]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[3]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[2]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[1]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_unload_reg[0]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[30]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[29]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[28]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[27]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[26]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[25]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[24]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[23]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[22]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[21]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[20]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[19]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[18]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[17]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[16]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[15]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[14]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[13]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[12]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[11]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[10]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[9]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[8]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[7]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[6]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[5]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[4]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[3]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[2]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[1]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_unload_reg[0]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (cp/cp_unload_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (cp/cp_unload_reg[30]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (cp/cp_unload_reg[29]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (cp/cp_unload_reg[28]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/ready_reg )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7471 ; free virtual = 27013
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7430 ; free virtual = 26972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7429 ; free virtual = 26971
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1' to reference 'CP_Top' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1_S00_AXI' to reference 'CP_Top_0' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1_M00_AXIS' to reference 'CP_Top_2' which has no pins
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         4|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_gen_0    |     1|
+|2     |blk_mem_gen_0__4 |     1|
+|3     |blk_mem_gen_0__5 |     1|
+|4     |blk_mem_gen_0__6 |     1|
+|5     |BUFG             |     3|
+|6     |CARRY4           |     4|
+|7     |LUT1             |    17|
+|8     |LUT2             |     3|
+|9     |LUT3             |     6|
+|10    |LUT4             |    22|
+|11    |LUT5             |     4|
+|12    |LUT6             |    36|
+|13    |FDRE             |   228|
+|14    |IBUF             |    84|
+|15    |OBUF             |    82|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+----------------------------+------+
+|      |Instance                           |Module                      |Cells |
++------+-----------------------------------+----------------------------+------+
+|1     |top                                |                            |   617|
+|2     |  Cyclic_Prefix_v0_1_M00_AXIS_inst |Cyclic_Prefix_v0_1_M00_AXIS |    64|
+|3     |    cp                             |CP_Top_2                    |    32|
+|4     |  Cyclic_Prefix_v0_1_S00_AXIS_inst |Cyclic_Prefix_v0_1_S00_AXIS |    95|
+|5     |    cp                             |CP_Top_1                    |    95|
+|6     |  Cyclic_Prefix_v0_1_S00_AXI_inst  |Cyclic_Prefix_v0_1_S00_AXI  |   257|
+|7     |    cp                             |CP_Top_0                    |    32|
+|8     |  cp                               |CP_Top                      |    32|
++------+-----------------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.582 ; gain = 570.117 ; free physical = 7411 ; free virtual = 26953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 334 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1500.582 ; gain = 103.465 ; free physical = 7411 ; free virtual = 26953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1500.590 ; gain = 570.125 ; free physical = 7411 ; free virtual = 26953
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 271 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1500.590 ; gain = 464.621 ; free physical = 7402 ; free virtual = 26944
+INFO: [Common 17-1381] The checkpoint '/home/alex/Documents/Vivado/ip_repo/GitHub/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/Cyclic_Prefix_v0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1524.594 ; gain = 0.000 ; free physical = 7400 ; free virtual = 26942
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 21 11:43:10 2018...

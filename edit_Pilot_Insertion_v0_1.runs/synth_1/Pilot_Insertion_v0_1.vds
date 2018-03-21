@@ -1,0 +1,470 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Mar 20 15:05:34 2018
+# Process ID: 23206
+# Current directory: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Pilot_Insertion_v0_1.runs/synth_1
+# Command line: vivado -log Pilot_Insertion_v0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pilot_Insertion_v0_1.tcl
+# Log file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Pilot_Insertion_v0_1.runs/synth_1/Pilot_Insertion_v0_1.vds
+# Journal file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Pilot_Insertion_v0_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source Pilot_Insertion_v0_1.tcl -notrace
+Command: synth_design -top Pilot_Insertion_v0_1 -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23217 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Pilot_Insertion_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Pilot_Insertion_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:64]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1124.766 ; gain = 194.305 ; free physical = 6651 ; free virtual = 26691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1_S00_AXI' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Top' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Top.v:23]
+INFO: [Synth 8-4471] merging register 'valid_reg' into 'ready_reg' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Top.v:43]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Top' (1#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Top.v:23]
+WARNING: [Synth 8-689] width (3) of port connection 'pilot_interval' does not match port width (4) of module 'Pilot_Top' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:396]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 3 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1_S00_AXI' (2#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1_S00_AXIS' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:4]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter NUMBER_OF_INPUT_WORDS bound to: 8 - type: integer 
+	Parameter bit_num bound to: 3 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter WRITE_FIFO bound to: 2'b01 
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 4 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:165]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1_S00_AXIS' (3#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1_M00_AXIS' [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:4]
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+	Parameter NUMBER_OF_OUTPUT_WORDS bound to: 8 - type: integer 
+	Parameter WAIT_COUNT_BITS bound to: 5 - type: integer 
+	Parameter bit_num bound to: 4 - type: integer 
+	Parameter IDLE bound to: 2'b00 
+	Parameter INIT_COUNTER bound to: 2'b01 
+	Parameter SEND_STREAM bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:106]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 2 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:226]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1_M00_AXIS' (4#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 1 given [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1.v:127]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1' (5#1) [/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Pilot_Insertion_0.1/hdl/Pilot_Insertion_v0_1.v:4]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[4]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[3]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[2]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[1]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[0]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[31]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[30]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[29]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[28]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[27]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[26]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[25]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[24]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[23]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[22]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[21]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[20]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[19]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[18]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[17]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[16]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[15]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[14]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[13]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[12]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[11]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[10]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[9]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[8]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[7]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[6]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[5]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[4]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[3]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[2]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[1]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXIS has unconnected port S_AXIS_TLAST
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXIS has unconnected port S_AXIS_TVALID
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1150.016 ; gain = 219.555 ; free physical = 6625 ; free virtual = 26665
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1150.016 ; gain = 219.555 ; free physical = 6625 ; free virtual = 26665
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1158.020 ; gain = 227.559 ; free physical = 6625 ; free virtual = 26665
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1166.027 ; gain = 235.566 ; free physical = 6613 ; free virtual = 26658
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 5     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 9     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Pilot_Top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+Module Pilot_Insertion_v0_1_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 4     
+Module Pilot_Insertion_v0_1_M00_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design Pilot_Insertion_v0_1 has port m00_axis_tstrb[3] driven by constant 1
+WARNING: [Synth 8-3917] design Pilot_Insertion_v0_1 has port m00_axis_tstrb[2] driven by constant 1
+WARNING: [Synth 8-3917] design Pilot_Insertion_v0_1 has port m00_axis_tstrb[1] driven by constant 1
+WARNING: [Synth 8-3917] design Pilot_Insertion_v0_1 has port m00_axis_tstrb[0] driven by constant 1
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axi_arprot[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[31]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[30]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[29]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[28]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[27]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[26]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[25]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[24]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[23]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[22]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[21]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[20]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[19]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[18]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[17]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[16]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[15]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[14]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[13]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[12]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[11]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[10]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[9]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[8]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[7]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[6]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[5]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[4]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[3]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tdata[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tlast
+WARNING: [Synth 8-3331] design Pilot_Insertion_v0_1 has unconnected port s00_axis_tvalid
+INFO: [Synth 8-3886] merging instance 'Pilot_Insertion_v0_1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'Pilot_Insertion_v0_1_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pilot_Insertion_v0_1_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'Pilot_Insertion_v0_1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'Pilot_Insertion_v0_1_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Pilot_Insertion_v0_1_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\pilot/pilot_inserted_reg )
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_S00_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (pilot/cnt_reg[4]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (pilot/cnt_reg[3]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (pilot/cnt_reg[2]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (pilot/cnt_reg[1]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (pilot/cnt_reg[0]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (pilot/pilot_inserted_reg) is unused and will be removed from module Pilot_Insertion_v0_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6492 ; free virtual = 26532
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6492 ; free virtual = 26532
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[31]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[30]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[29]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[28]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[27]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[26]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[25]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[24]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[23]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[22]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[21]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[20]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[19]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[18]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[17]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[16]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[15]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[14]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[13]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[12]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[11]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[10]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[9]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[8]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[7]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[6]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[5]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[4]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[3]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[2]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[1]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/signal_out_reg[0]) is unused and will be removed from module Pilot_Insertion_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Pilot_Insertion_v0_1_M00_AXIS_inst/pilot/ready_reg) is unused and will be removed from module Pilot_Insertion_v0_1.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6492 ; free virtual = 26533
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     3|
+|2     |LUT1 |     4|
+|3     |LUT2 |     3|
+|4     |LUT3 |     6|
+|5     |LUT4 |    22|
+|6     |LUT5 |     4|
+|7     |LUT6 |    36|
+|8     |FDRE |   183|
+|9     |IBUF |    52|
+|10    |OBUF |    81|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------+------------------------------+------+
+|      |Instance                             |Module                        |Cells |
++------+-------------------------------------+------------------------------+------+
+|1     |top                                  |                              |   394|
+|2     |  Pilot_Insertion_v0_1_M00_AXIS_inst |Pilot_Insertion_v0_1_M00_AXIS |    32|
+|3     |  Pilot_Insertion_v0_1_S00_AXIS_inst |Pilot_Insertion_v0_1_S00_AXIS |     1|
+|4     |    pilot                            |Pilot_Top                     |     1|
+|5     |  Pilot_Insertion_v0_1_S00_AXI_inst  |Pilot_Insertion_v0_1_S00_AXI  |   225|
++------+-------------------------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.730 ; gain = 355.270 ; free physical = 6493 ; free virtual = 26533
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 150 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1285.730 ; gain = 242.184 ; free physical = 6493 ; free virtual = 26533
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1285.738 ; gain = 355.277 ; free physical = 6493 ; free virtual = 26533
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 150 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1415.547 ; gain = 387.582 ; free physical = 6385 ; free virtual = 26443
+INFO: [Common 17-1381] The checkpoint '/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Pilot_Insertion_v0_1.runs/synth_1/Pilot_Insertion_v0_1.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1439.559 ; gain = 0.000 ; free physical = 6391 ; free virtual = 26448
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 20 15:05:50 2018...

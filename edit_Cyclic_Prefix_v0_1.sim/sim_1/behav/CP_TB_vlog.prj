@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../Cyclic_Prefix_0.1/src/blk_mem_gen_0/sim/blk_mem_gen_0.v"
+verilog xil_defaultlib  "../../../Cyclic_Prefix_0.1/hdl/CP_Top.v"
+verilog xil_defaultlib  "../../../edit_Cyclic_Prefix_v0_1.srcs/sim_1/new/CP_TB.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

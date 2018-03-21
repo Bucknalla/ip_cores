@@ -22,7 +22,7 @@
 	)
 	(
 		// Users to add ports here
-
+        output wire pilot_flag,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -124,7 +124,10 @@
 	);
 
 	// Add user logic here
-
+    Pilot_Top pilot(
+       .pilot_inserted (pilot_flag)
+    );
+    
 	// User logic ends
 
 	endmodule
