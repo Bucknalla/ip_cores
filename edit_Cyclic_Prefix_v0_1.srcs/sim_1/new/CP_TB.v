@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -73,7 +73,7 @@ end
 // SETUP PARAMS
 initial 
 begin
-    cp_length = 4;
+    cp_length = 5;
     frame_length = 16;
 end    
 
@@ -83,7 +83,7 @@ begin
     rst = 1;
     counter = 0;
     signal_in = 0;
-    #2;  
+    #100;  
     rst = 0;
     repeat(100)
     begin
