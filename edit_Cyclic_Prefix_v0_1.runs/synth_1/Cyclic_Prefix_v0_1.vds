@@ -2,8 +2,8 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Thu Mar 22 13:18:53 2018
-# Process ID: 22045
+# Start of session at: Thu Mar 22 17:39:31 2018
+# Process ID: 10615
 # Current directory: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1
 # Command line: vivado -log Cyclic_Prefix_v0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Cyclic_Prefix_v0_1.tcl
 # Log file: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/Cyclic_Prefix_v0_1.vds
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22053 
+INFO: Helper process launched with PID 10620 
 WARNING: [Synth 8-2507] parameter declaration becomes local in Cyclic_Prefix_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:53]
 WARNING: [Synth 8-2507] parameter declaration becomes local in Cyclic_Prefix_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:64]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1126.770 ; gain = 196.305 ; free physical = 932 ; free virtual = 9136
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1126.770 ; gain = 196.305 ; free physical = 400 ; free virtual = 8735
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1' [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -250,7 +250,7 @@ INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_S00_AXIS' [/home/ale
 	Parameter bit_num bound to: 3 - type: integer 
 	Parameter IDLE bound to: 2'b00 
 	Parameter WRITE_FIFO bound to: 2'b01 
-WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 4 given [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 2 given [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
 INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_S00_AXIS' (33#1) [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:4]
 INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:4]
 	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
@@ -264,7 +264,7 @@ INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' [/home/ale
 INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:106]
 WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 2 given [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
 INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' (34#1) [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:4]
-WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 3 given [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:132]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 10 connections, but only 4 given [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:136]
 INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1' (35#1) [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v:4]
 WARNING: [Synth 8-3331] design wr_handshaking_flags has unconnected port WR_RST
 WARNING: [Synth 8-3331] design wr_handshaking_flags has unconnected port WR_RST_BUSY
@@ -368,7 +368,7 @@ WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_RST_INTO_LOGIC
 WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_RST_BUSY
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 1331.223 ; gain = 400.758 ; free physical = 700 ; free virtual = 8912
+Finished RTL Elaboration : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1331.223 ; gain = 400.758 ; free physical = 234 ; free virtual = 8577
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -411,6 +411,8 @@ WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[3] to constant 0 [/home/
 WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[2] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
 WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[1] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
 WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[0] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:rst to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
 WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[31] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
 WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[30] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
 WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[29] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
@@ -475,11 +477,9 @@ WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[11] to constant 0 [/home
 WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[10] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
 WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[9] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
 WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[8] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
-WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[7] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
-WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[6] to constant 0 [/home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:51 ; elapsed = 00:00:52 . Memory (MB): peak = 1331.223 ; gain = 400.758 ; free physical = 703 ; free virtual = 8916
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1331.223 ; gain = 400.758 ; free physical = 238 ; free virtual = 8580
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 144 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -505,16 +505,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1561.098 ; gain = 0.000 ; free physical = 665 ; free virtual = 8877
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1561.098 ; gain = 0.000 ; free physical = 287 ; free virtual = 8629
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:00 ; elapsed = 00:01:00 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 666 ; free virtual = 8877
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 289 ; free virtual = 8632
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:00 ; elapsed = 00:01:00 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 666 ; free virtual = 8877
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 289 ; free virtual = 8632
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -528,14 +528,14 @@ Applied set_property DONT_TOUCH = true for Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/f
 Applied set_property DONT_TOUCH = true for Cyclic_Prefix_v0_1_S00_AXI_inst/cp/fifo. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for cp/fifo. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:00 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 666 ; free virtual = 8877
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 289 ; free virtual = 8632
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 658 ; free virtual = 8869
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 281 ; free virtual = 8624
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -726,6 +726,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/rd_en_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/rd_en_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/wr_en_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cp/rd_en_reg )
 INFO: [Synth 8-3886] merging instance 'cp/din_reg[0]' (FDE) to 'cp/din_reg[31]'
 INFO: [Synth 8-3886] merging instance 'cp/din_reg[1]' (FDE) to 'cp/din_reg[31]'
@@ -799,6 +800,8 @@ INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_d
 INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[29]' (FDE) to 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[30]'
 INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[30]' (FDE) to 'Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[31]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[31] )
+INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/wr_en_reg' (FDE) to 'Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/ready_reg'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/ready_reg )
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module Cyclic_Prefix_v0_1.
@@ -806,6 +809,7 @@ WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/axi_
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_flag_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/ready_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/rd_en_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_flag_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
@@ -849,7 +853,7 @@ WARNING: [Synth 8-3332] Sequential element (cp/error_reg) is unused and will be 
 WARNING: [Synth 8-3332] Sequential element (cp/din_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (cp/rd_en_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 643 ; free virtual = 8854
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 262 ; free virtual = 8609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -864,10 +868,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 598 ; free virtual = 8810
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 241 ; free virtual = 8584
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 598 ; free virtual = 8809
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:02 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 241 ; free virtual = 8583
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -914,25 +918,23 @@ WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/d
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/din_reg[0]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/wr_en_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
 WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXI_inst/cp/rd_en_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/valid_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/rst_fifo_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[30]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[29]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[28]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[27]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[26]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[25]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[24]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[23]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[22]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[21]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[20]) is unused and will be removed from module Cyclic_Prefix_v0_1.
-WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/din_reg[19]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/rst_fifo_reg) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[31]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[30]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[29]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[28]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[27]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[26]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[25]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[24]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[23]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[22]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[21]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[20]) is unused and will be removed from module Cyclic_Prefix_v0_1.
+WARNING: [Synth 8-3332] Sequential element (Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[19]) is unused and will be removed from module Cyclic_Prefix_v0_1.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/wr_en_reg' (FDE) to 'Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/ready_reg'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:01:09 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 578 ; free virtual = 8796
+Finished Technology Mapping : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 214 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -956,7 +958,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8796
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -969,7 +971,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 578 ; free virtual = 8796
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -980,29 +982,30 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1' to reference 'CP_Top' which has no pins
-WARNING: [Synth 8-115] binding instance 'Cyclic_Prefix_v0_1_S00_AXI_insti_0' in module 'Cyclic_Prefix_v0_1_S00_AXI' to reference 'CP_Top__xdcDup__3' which has no pins
-WARNING: [Synth 8-115] binding instance 'Cyclic_Prefix_v0_1_M00_AXIS_insti_0' in module 'Cyclic_Prefix_v0_1_M00_AXIS' to reference 'CP_Top__xdcDup__1' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1' to reference 'Cyclic_Prefix_v0_1_S00_AXIS' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1_S00_AXI' to reference 'CP_Top__xdcDup__3' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1_S00_AXIS' to reference 'CP_Top__xdcDup__2' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_0' in module 'Cyclic_Prefix_v0_1_M00_AXIS' to reference 'CP_Top__xdcDup__1' which has no pins
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8796
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8796
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8795
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8795
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1018,21 +1021,21 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |BUFG       |     3|
+|1     |BUFG       |     1|
 |2     |CARRY4     |    48|
-|3     |LUT1       |   117|
+|3     |LUT1       |   115|
 |4     |LUT2       |    31|
 |5     |LUT3       |   182|
 |6     |LUT4       |   138|
 |7     |LUT5       |    20|
-|8     |LUT6       |    48|
+|8     |LUT6       |    47|
 |9     |MUXCY      |   112|
 |10    |RAMB18E1   |     4|
 |11    |RAMB36E1   |     4|
 |12    |RAMB36E1_1 |    24|
-|13    |FDRE       |   628|
+|13    |FDRE       |   596|
 |14    |FDSE       |    36|
-|15    |IBUF       |    84|
+|15    |IBUF       |    48|
 |16    |OBUF       |    82|
 +------+-----------+------+
 
@@ -1040,8 +1043,8 @@ Report Instance Areas:
 +------+-------------------------------------------------------------+---------------------------------------------+------+
 |      |Instance                                                     |Module                                       |Cells |
 +------+-------------------------------------------------------------+---------------------------------------------+------+
-|1     |top                                                          |                                             |  1561|
-|2     |  Cyclic_Prefix_v0_1_M00_AXIS_inst                           |Cyclic_Prefix_v0_1_M00_AXIS                  |   307|
+|1     |top                                                          |                                             |  1488|
+|2     |  Cyclic_Prefix_v0_1_M00_AXIS_inst                           |Cyclic_Prefix_v0_1_M00_AXIS                  |   305|
 |3     |    cp                                                       |CP_Top__xdcDup__1                            |   275|
 |4     |      fifo                                                   |fifo_generator_0__xdcDup__1                  |   275|
 |5     |        U0                                                   |fifo_generator_v13_1_3__6                    |   275|
@@ -1084,8 +1087,8 @@ Report Instance Areas:
 |42    |                            \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized5_101 |     1|
 |43    |                          \ramloop[7].ram.r                  |blk_mem_gen_prim_width__parameterized6_99    |     1|
 |44    |                            \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized6_100 |     1|
-|45    |  Cyclic_Prefix_v0_1_S00_AXIS_inst                           |Cyclic_Prefix_v0_1_S00_AXIS                  |   310|
-|46    |    cp                                                       |CP_Top__xdcDup__2                            |   310|
+|45    |  Cyclic_Prefix_v0_1_S00_AXIS_inst                           |Cyclic_Prefix_v0_1_S00_AXIS                  |   275|
+|46    |    cp                                                       |CP_Top__xdcDup__2                            |   275|
 |47    |      fifo                                                   |fifo_generator_0__xdcDup__2                  |   275|
 |48    |        U0                                                   |fifo_generator_v13_1_3__5                    |   275|
 |49    |          inst_fifo_gen                                      |fifo_generator_v13_1_3_synth_42              |   275|
@@ -1170,7 +1173,7 @@ Report Instance Areas:
 |128   |                            \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized5_23  |     1|
 |129   |                          \ramloop[7].ram.r                  |blk_mem_gen_prim_width__parameterized6_21    |     1|
 |130   |                            \prim_noinit.ram                 |blk_mem_gen_prim_wrapper__parameterized6_22  |     1|
-|131   |  cp                                                         |CP_Top                                       |   275|
+|131   |  cp                                                         |CP_Top                                       |   277|
 |132   |    fifo                                                     |fifo_generator_0                             |   275|
 |133   |      U0                                                     |fifo_generator_v13_1_3                       |   275|
 |134   |        inst_fifo_gen                                        |fifo_generator_v13_1_3_synth                 |   275|
@@ -1214,13 +1217,13 @@ Report Instance Areas:
 |172   |                          \prim_noinit.ram                   |blk_mem_gen_prim_wrapper__parameterized6     |     1|
 +------+-------------------------------------------------------------+---------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8795
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 213 ; free virtual = 8556
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 633 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1561.098 ; gain = 285.668 ; free physical = 577 ; free virtual = 8795
-Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 577 ; free virtual = 8795
+Synthesis finished with 0 errors, 0 critical warnings and 674 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:00:55 . Memory (MB): peak = 1561.098 ; gain = 285.668 ; free physical = 213 ; free virtual = 8556
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:03 . Memory (MB): peak = 1561.098 ; gain = 630.633 ; free physical = 215 ; free virtual = 8557
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 240 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1229,9 +1232,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   (MUXCY,XORCY) => CARRY4: 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-118 Infos, 310 Warnings, 0 Critical Warnings and 0 Errors encountered.
+120 Infos, 311 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 1561.098 ; gain = 528.129 ; free physical = 580 ; free virtual = 8793
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1561.098 ; gain = 528.129 ; free physical = 211 ; free virtual = 8554
 INFO: [Common 17-1381] The checkpoint '/home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/Cyclic_Prefix_v0_1.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1585.109 ; gain = 0.000 ; free physical = 579 ; free virtual = 8792
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 22 13:20:10 2018...
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1585.109 ; gain = 0.000 ; free physical = 208 ; free virtual = 8551
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 22 17:40:41 2018...
