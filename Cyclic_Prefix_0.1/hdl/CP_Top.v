@@ -33,12 +33,8 @@ module CP_Top(
     output reg cp_flag
 );
 
-reg [4:0] cnt = 0;
-reg [4:0] cp_cnt = 0;
-
 reg [31:0] din;
 wire [31:0] dout;
-//reg [31:0] cp_unload;
 reg [31:0] out_data;
 reg wr_en, rd_en = 0;
 reg rst_fifo = 0;
@@ -46,18 +42,13 @@ reg rst_fifo = 0;
 wire full, empty;
 
 wire [13:0] data_count;
-
 wire [31:0] cp_length_link;
-//wire [31:0] cp_unload_bram;
 
 assign signal_out = out_data;
-
 assign cp_length_link = cp_length;
-//assign cp_unload_bram = cp_unload;
 
 always @ (posedge clk) begin
    if(rst) begin
-       cnt <= 0;
        ready <= 0;
        valid <= 0;
        error <= 0;
@@ -66,10 +57,10 @@ always @ (posedge clk) begin
        rst_fifo <= 1;
        cp_flag <= 0;
        din <= signal_in;
-       cp_cnt <= 0;
    end
    else begin
        valid <= 1;
+       
        if(cp_flag) begin
            out_data <= dout;
            ready <= 0;
@@ -78,28 +69,24 @@ always @ (posedge clk) begin
            out_data <= signal_in;
        end
        
-//       if(data_count == frame_length - 1) begin
-//          ready <= 0;
-//       end
-       
-       if(data_count == frame_length - 2) begin
-           cp_flag <= 1;
-//           ready <= 0;
-
-//           out_data <= dout;
-
-       end
-       else if(data_count == frame_length - 3 & !cp_flag) begin
+       if((data_count == (frame_length - 2)) & !cp_flag) begin
            rd_en <= 1;
            wr_en <= 0;
        end
-       else if (data_count > ((frame_length - cp_length) - 2) & cp_flag) begin
+       
+       if (data_count > ((frame_length - cp_length) + 1) & cp_flag) begin
            out_data <= dout;
        end
-       else if (data_count == ((frame_length - cp_length) - 2) & cp_flag) begin
+       
+       if (data_count == ((frame_length - cp_length) + 1) & cp_flag) begin
            rst_fifo <= 1;
+           cp_flag <= 0;
        end
-       else begin
+       
+       if(data_count == (frame_length - 2)) begin
+           cp_flag <= 1;
+       end
+       else if (!cp_flag) begin
            rd_en <= 0;
            wr_en <= 1;
            cp_flag <= 0;
@@ -108,7 +95,6 @@ always @ (posedge clk) begin
            rst_fifo <= 0;
            
            din <= signal_in;
-
            out_data <= signal_in;
 
        end
@@ -127,16 +113,5 @@ fifo_generator_0 fifo(
   .wr_ack (wr_ack),
   .data_count (data_count)
 );
-
-//blk_mem_gen_0 bram (
-//    .clka (clk),
-//    .addra (addr),
-//    .dina (cp_load),
-//    .wea (wea),
-//    .ena (ena),
-//    .douta (cp_unload_bram),
-//    .rsta (rst)
-//);
-
 
 endmodule

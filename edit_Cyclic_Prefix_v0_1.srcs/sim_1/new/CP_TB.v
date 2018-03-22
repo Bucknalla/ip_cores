@@ -85,7 +85,7 @@ begin
     signal_in = 0;
     #100;  
     rst = 0;
-    repeat(100)
+    repeat(1000)
     begin
         #20 signal_in = signal_in + 1;
         counter = counter + 1'b1;
