@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Mar 26 11:05:43 2018
+# Process ID: 16199
+# Current directory: /home/alex/vivado/ip_repo
+# Command line: vivado
+# Log file: /home/alex/vivado/ip_repo/vivado.log
+# Journal file: /home/alex/vivado/ip_repo/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/alex/vivado/ip_repo/edit_OFDM_Controller_v0_1.xpr
