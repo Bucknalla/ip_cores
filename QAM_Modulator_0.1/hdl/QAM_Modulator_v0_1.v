@@ -25,7 +25,7 @@
 
 		// User ports ends
 		// Do not modify the ports beyond this line
-
+        output wire error,
 
 		// Ports of Axi Slave Bus Interface S00_AXI
 		input wire  s00_axi_aclk,
@@ -124,7 +124,11 @@
 	);
 
 	// Add user logic here
-
+        qam_top qam(
+        .clk(s00_axi_aclk),
+        .rst(s00_axi_aresetn),
+        .error(error)
+    );
 	// User logic ends
 
 	endmodule

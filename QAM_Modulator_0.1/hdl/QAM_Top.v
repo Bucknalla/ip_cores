@@ -70,6 +70,7 @@ always @ (posedge clk) begin
         end
         else begin
             valid <= 0;
+            error <= 1;
         end
         if (ready) begin
         case (qam)
