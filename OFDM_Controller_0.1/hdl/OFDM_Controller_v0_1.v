@@ -52,6 +52,8 @@
 
 		// User ports ends
 		// Do not modify the ports beyond this line
+		input wire [7:0] error_bus,
+		input wire [6:0] status_bus,
 
 
 		// Ports of Axi Master Bus Interface M00_AXI
