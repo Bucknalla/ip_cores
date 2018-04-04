@@ -30,6 +30,7 @@ module controller #
 (
     input clk,
     input rst,
+    
     input [C_S_AXI_DATA_WIDTH-1:0]    reg0,
     input [C_S_AXI_DATA_WIDTH-1:0]    reg1,
     input [C_S_AXI_DATA_WIDTH-1:0]    reg2,
@@ -43,23 +44,25 @@ module controller #
     input [C_S_AXI_DATA_WIDTH-1:0]    reg10,
     input [C_S_AXI_DATA_WIDTH-1:0]    reg11,
 
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   qam_reg0, // QAM Scheme
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   qam_reg0,  // QAM Scheme
 
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   pre_reg0, // Preamble Symbol
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   pre_reg1, // Preamble Config
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   pre_reg0,  // Preamble Symbol
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   pre_reg1,  // Preamble Config
 
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   pil_reg0, // Location of Pilot
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   pil_reg1, // Value of Pilot
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   pil_reg0,  // Location of Pilot
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   pil_reg1,  // Value of Pilot
 
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   fft_reg0, // {N Samples of FFT [4:0], FWD/INV* [0], CP?} *Per number of FFT Channels
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   fft_reg0,  // {N Samples of FFT [4:0], FWD/INV* [0], CP?} *Per number of FFT Channels
     output reg [C_S_AXI_DATA_WIDTH-1:0]   fft_reg1, 
 
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   cyc_reg0, // Length of Cyclic Prefix
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   cyc_reg1,
-    output reg [C_S_AXI_DATA_WIDTH-1:0]   cyc_reg2,
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   cyc_reg0,  // Length of Cyclic Prefix
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   cyc_reg1,  
+    
+    output reg [C_S_AXI_DATA_WIDTH-1:0]   frame_reg0,// Length of OFDM Frame
        
     output reg [C_S_AXI_DATA_WIDTH-1:0]   config_reg0, 
     output reg [C_S_AXI_DATA_WIDTH-1:0]   error_reg0 // Error Register for Processing System 32'b{qam_error, pre_error, pil_error, fft_error, cyclic_error, data_error}
+         
          
 );
     
@@ -74,7 +77,7 @@ reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg7;
 reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg8;
 reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg9;
 reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg10;
-reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg11;    
+reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg11;
 
 always @ (posedge clk) begin
     if(rst) begin
@@ -109,6 +112,12 @@ end
 
 
 always @ (posedge clk) begin
+
+// General Properties
+
+    // Frame Length
+    frame_reg0 <= slv_reg9;
+
 // QAM Modulation Controller
 
     case (slv_reg0)
@@ -118,6 +127,11 @@ always @ (posedge clk) begin
         3 : qam_reg0 <= 4; // QAM : 64-QAM
         default: qam_reg0 <= 0;
     endcase
+    
+// Preamble Controller
+
+    // Set the length of the Frame
+    
     
 // Pilot Carrier Insertion Controller
 

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="17" Path="/home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.xpr">
+<Project Version="7" Minor="17" Path="/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="39eb75d446b44e198a315bfd0d015d2f"/>
@@ -20,7 +20,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/Cyclic_Prefix_0.1"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_cores/QAM_Modulator_0.1"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/QAM_Modulator_0.1"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../GitHub/parametric_qam/ip_repo/qam_mod_1.0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -32,7 +32,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zedboard"/>
     <Option Name="DSANumComputeUnits" Val="16"/>
-    <Option Name="WTXSimLaunchSim" Val="105"/>
+    <Option Name="WTXSimLaunchSim" Val="106"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>

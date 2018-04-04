@@ -32,7 +32,7 @@ wire error;
 
 qam_top qam_dut (
     .clk (clk),
-    .rst (rst), // Active High
+    .rst (rst), 
     .signal_in (signal_in), 
     .qam (qam),
     .signal_out (signal_out),

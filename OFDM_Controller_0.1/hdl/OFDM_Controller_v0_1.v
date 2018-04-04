@@ -29,6 +29,13 @@
 		parameter integer C_M02_AXI_ADDR_WIDTH	= 32,
 		parameter integer C_M02_AXI_DATA_WIDTH	= 32,
 		parameter integer C_M02_AXI_TRANSACTIONS_NUM	= 4,
+		
+		// Parameters of Axi Master Bus Interface M03_AXI
+        parameter  C_M03_AXI_START_DATA_VALUE    = 32'hAA000000,
+        parameter  C_M03_AXI_TARGET_SLAVE_BASE_ADDR    = 32'h40000000,
+        parameter integer C_M03_AXI_ADDR_WIDTH    = 32,
+        parameter integer C_M03_AXI_DATA_WIDTH    = 32,
+        parameter integer C_M03_AXI_TRANSACTIONS_NUM    = 4,
 
 		// Parameters of Axi Master Bus Interface M00_AXIS
 		parameter integer C_M00_AXIS_TDATA_WIDTH	= 32,
@@ -53,7 +60,7 @@
 		// User ports ends
 		// Do not modify the ports beyond this line
 		input wire [7:0] error_bus,
-		input wire [6:0] status_bus,
+		input wire [3:0] status_bus,
 
 
 		// Ports of Axi Master Bus Interface M00_AXI
@@ -133,6 +140,32 @@
 		input wire [1 : 0] m02_axi_rresp,
 		input wire  m02_axi_rvalid,
 		output wire  m02_axi_rready,
+		
+		// Ports of Axi Master Bus Interface M03_AXI
+        input wire  m03_axi_init_axi_txn,
+        output wire  m03_axi_error,
+        output wire  m03_axi_txn_done,
+        input wire  m03_axi_aclk,
+        input wire  m03_axi_aresetn,
+        output wire [C_M03_AXI_ADDR_WIDTH-1 : 0] m03_axi_awaddr,
+        output wire [2 : 0] m03_axi_awprot,
+        output wire  m03_axi_awvalid,
+        input wire  m03_axi_awready,
+        output wire [C_M03_AXI_DATA_WIDTH-1 : 0] m03_axi_wdata,
+        output wire [C_M03_AXI_DATA_WIDTH/8-1 : 0] m03_axi_wstrb,
+        output wire  m03_axi_wvalid,
+        input wire  m03_axi_wready,
+        input wire [1 : 0] m03_axi_bresp,
+        input wire  m03_axi_bvalid,
+        output wire  m03_axi_bready,
+        output wire [C_M03_AXI_ADDR_WIDTH-1 : 0] m03_axi_araddr,
+        output wire [2 : 0] m03_axi_arprot,
+        output wire  m03_axi_arvalid,
+        input wire  m03_axi_arready,
+        input wire [C_M03_AXI_DATA_WIDTH-1 : 0] m03_axi_rdata,
+        input wire [1 : 0] m03_axi_rresp,
+        input wire  m03_axi_rvalid,
+        output wire  m03_axi_rready,
 
 		// Ports of Axi Master Bus Interface M00_AXIS
 		input wire  m00_axis_aclk,
@@ -197,7 +230,7 @@
 		.C_M_AXI_ADDR_WIDTH(C_M00_AXI_ADDR_WIDTH),
 		.C_M_AXI_DATA_WIDTH(C_M00_AXI_DATA_WIDTH),
 		.C_M_TRANSACTIONS_NUM(C_M00_AXI_TRANSACTIONS_NUM)
-	) OFDM_Controller_v0_1_M00_AXI_inst (
+	) QAM (
 		.INIT_AXI_TXN(m00_axi_init_axi_txn),
 		.ERROR(m00_axi_error),
 		.TXN_DONE(m00_axi_txn_done),
@@ -231,7 +264,7 @@
 		.C_M_AXI_ADDR_WIDTH(C_M01_AXI_ADDR_WIDTH),
 		.C_M_AXI_DATA_WIDTH(C_M01_AXI_DATA_WIDTH),
 		.C_M_TRANSACTIONS_NUM(C_M01_AXI_TRANSACTIONS_NUM)
-	) OFDM_Controller_v0_1_M01_AXI_inst (
+	) Preamble (
 		.INIT_AXI_TXN(m01_axi_init_axi_txn),
 		.ERROR(m01_axi_error),
 		.TXN_DONE(m01_axi_txn_done),
@@ -265,7 +298,7 @@
 		.C_M_AXI_ADDR_WIDTH(C_M02_AXI_ADDR_WIDTH),
 		.C_M_AXI_DATA_WIDTH(C_M02_AXI_DATA_WIDTH),
 		.C_M_TRANSACTIONS_NUM(C_M02_AXI_TRANSACTIONS_NUM)
-	) OFDM_Controller_v0_1_M02_AXI_inst (
+	) Pilot (
 		.INIT_AXI_TXN(m02_axi_init_axi_txn),
 		.ERROR(m02_axi_error),
 		.TXN_DONE(m02_axi_txn_done),
@@ -292,11 +325,45 @@
 		.M_AXI_RREADY(m02_axi_rready)
 	);
 
+// Instantiation of Axi Bus Interface M03_AXI
+	OFDM_Controller_v0_1_M03_AXI # ( 
+		.C_M_START_DATA_VALUE(C_M03_AXI_START_DATA_VALUE),
+		.C_M_TARGET_SLAVE_BASE_ADDR(C_M03_AXI_TARGET_SLAVE_BASE_ADDR),
+		.C_M_AXI_ADDR_WIDTH(C_M03_AXI_ADDR_WIDTH),
+		.C_M_AXI_DATA_WIDTH(C_M03_AXI_DATA_WIDTH),
+		.C_M_TRANSACTIONS_NUM(C_M03_AXI_TRANSACTIONS_NUM)
+	) Cyclic (
+		.INIT_AXI_TXN(m03_axi_init_axi_txn),
+		.ERROR(m03_axi_error),
+		.TXN_DONE(m03_axi_txn_done),
+		.M_AXI_ACLK(m03_axi_aclk),
+		.M_AXI_ARESETN(m03_axi_aresetn),
+		.M_AXI_AWADDR(m03_axi_awaddr),
+		.M_AXI_AWPROT(m03_axi_awprot),
+		.M_AXI_AWVALID(m03_axi_awvalid),
+		.M_AXI_AWREADY(m03_axi_awready),
+		.M_AXI_WDATA(m03_axi_wdata),
+		.M_AXI_WSTRB(m03_axi_wstrb),
+		.M_AXI_WVALID(m03_axi_wvalid),
+		.M_AXI_WREADY(m03_axi_wready),
+		.M_AXI_BRESP(m03_axi_bresp),
+		.M_AXI_BVALID(m03_axi_bvalid),
+		.M_AXI_BREADY(m03_axi_bready),
+		.M_AXI_ARADDR(m03_axi_araddr),
+		.M_AXI_ARPROT(m03_axi_arprot),
+		.M_AXI_ARVALID(m03_axi_arvalid),
+		.M_AXI_ARREADY(m03_axi_arready),
+		.M_AXI_RDATA(m03_axi_rdata),
+		.M_AXI_RRESP(m03_axi_rresp),
+		.M_AXI_RVALID(m03_axi_rvalid),
+		.M_AXI_RREADY(m03_axi_rready)
+	);
+
 // Instantiation of Axi Bus Interface M00_AXIS
 	OFDM_Controller_v0_1_M00_AXIS # ( 
 		.C_M_AXIS_TDATA_WIDTH(C_M00_AXIS_TDATA_WIDTH),
 		.C_M_START_COUNT(C_M00_AXIS_START_COUNT)
-	) OFDM_Controller_v0_1_M00_AXIS_inst (
+	) IFFT (
 		.M_AXIS_ACLK(m00_axis_aclk),
 		.M_AXIS_ARESETN(m00_axis_aresetn),
 		.M_AXIS_TVALID(m00_axis_tvalid),
@@ -310,7 +377,7 @@
 	OFDM_Controller_v0_1_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
-	) OFDM_Controller_v0_1_S00_AXI_inst (
+	) PS (
 		.S_AXI_ACLK(s00_axi_aclk),
 		.S_AXI_ARESETN(s00_axi_aresetn),
 		.S_AXI_AWADDR(s00_axi_awaddr),
@@ -343,7 +410,7 @@
 		.C_INTR_ACTIVE_STATE(C_INTR_ACTIVE_STATE),
 		.C_IRQ_SENSITIVITY(C_IRQ_SENSITIVITY),
 		.C_IRQ_ACTIVE_STATE(C_IRQ_ACTIVE_STATE)
-	) OFDM_Controller_v0_1_S_AXI_INTR_inst (
+	) Interrupt (
 		.S_AXI_ACLK(s_axi_intr_aclk),
 		.S_AXI_ARESETN(s_axi_intr_aresetn),
 		.S_AXI_AWADDR(s_axi_intr_awaddr),
