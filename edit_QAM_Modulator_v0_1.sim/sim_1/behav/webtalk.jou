@@ -2,8 +2,8 @@
 # Webtalk v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Mon Mar 19 12:30:21 2018
-# Process ID: 16380
+# Start of session at: Thu Apr  5 15:10:59 2018
+# Process ID: 13996
 # Current directory: /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav
 # Command line: wbtcv -mode batch -source /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav/xsim.dir/qam_mod_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav/webtalk.log

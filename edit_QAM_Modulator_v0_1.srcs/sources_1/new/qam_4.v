@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module qam_2(
+module qam_4(
     input clk,
     input rst, 
     input select,
-    input signal_in,
+    input [1:0] signal_in,
     output wire [31:0] signal_out,
     output reg ready
     );
@@ -41,6 +41,8 @@ always @ (posedge clk) begin
         case (signal_in) 
             0 : signal_out_mod <= 32'b00000000000000000000000000000001; // 1 + 0j
             1 : signal_out_mod <= 32'b00000000000000000000111111111111; // -1 + 0j
+            2 : signal_out_mod <= 32'b00000000000000000000000000000001; // 1 + 0j
+            3 : signal_out_mod <= 32'b00000000000000000000111111111111; // -1 + 0j
         endcase 
         ready <= 1'b1;
     end

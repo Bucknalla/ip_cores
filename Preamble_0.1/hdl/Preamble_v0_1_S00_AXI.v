@@ -212,9 +212,9 @@
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
-	      slv_reg0 <= 0;
-	      slv_reg1 <= 0;
-	      slv_reg2 <= 0;
+	      slv_reg0 <= 1; // Preamble Value
+	      slv_reg1 <= 32; // Preamble Length
+	      slv_reg2 <= 512; // Frame Length
 	      slv_reg3 <= 0;
 	    end 
 	  else begin

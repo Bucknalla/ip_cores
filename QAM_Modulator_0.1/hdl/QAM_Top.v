@@ -88,26 +88,26 @@ qam_2 qam2 (
     .rst (rst),
     .select (select_qam_2),
     .ready (mod_ready),
-    .signal_in (signal_in_mod[0]),
+    .signal_in (signal_in_mod[31]),
     .signal_out (signal_out)
 );
     
-//  qam_4 qam4 (
-//      .clk (clk),
-//      .rst (rst),
-//      .select (select_qam_4),
-//      .ready (mod_ready),
-//      .signal_in (signal_in_mod[31:30]),
-//      .signal_out (signal_out)
-//  );
+qam_4 qam4 (
+    .clk (clk),
+    .rst (rst),
+    .select (select_qam_4),
+    .ready (mod_ready),
+    .signal_in (signal_in_mod[31:30]),
+    .signal_out (signal_out)
+);
 
-//  qam_16 qam16 (
-//      .clk (clk),
-//      .rst (rst),
-//      .select (select_qam_16),
-//      .ready (mod_ready),
-//      .signal_in (signal_in_mod[31:28]),
-//      .signal_out (signal_out)
-//  );   
+qam_16 qam16 (
+    .clk (clk),
+    .rst (rst),
+    .select (select_qam_16),
+    .ready (mod_ready),
+    .signal_in (signal_in_mod[31:28]),
+    .signal_out (signal_out)
+);   
     
 endmodule

@@ -212,8 +212,8 @@ always @( posedge S_AXI_ACLK )
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
-      slv_reg0 <= 0;
-      slv_reg1 <= 0;
+      slv_reg0 <= 32; // CP length
+      slv_reg1 <= 512; // Frame Length
       slv_reg2 <= 0;
       slv_reg3 <= 0;
     end 

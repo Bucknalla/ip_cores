@@ -3,11 +3,14 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: /opt/Xilinx/Vivado/2016.4/bin/unwrapped/lnx64.o/xelab -wto d6e0779f6c6c4064983a99e8486da164 --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot qam_mod_tb_behav xil_defaultlib.qam_mod_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 3 for port signal_in [/home/alex/vivado/ip_repo/QAM_Modulator_0.1/hdl/QAM_Top.v:109]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.qam_2
+Compiling module xil_defaultlib.qam_4
+Compiling module xil_defaultlib.qam_16
 Compiling module xil_defaultlib.qam_top
 Compiling module xil_defaultlib.qam_mod_tb
 Compiling module xil_defaultlib.glbl
