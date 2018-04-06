@@ -26,8 +26,10 @@ reg clk, rst;
 reg [31:0] signal_in;
 reg [2:0] qam;
 wire [31:0] signal_out;
-wire ready;
-wire valid;
+wire ready_out;
+wire valid_out;
+reg ready_in;
+reg valid_in;
 wire error;
 
 qam_top qam_dut (
@@ -36,8 +38,10 @@ qam_top qam_dut (
     .signal_in (signal_in), 
     .qam (qam),
     .signal_out (signal_out),
-    .ready (ready),
-    .valid (valid),
+    .ready_in (ready_in),
+    .valid_in (valid_in),
+    .valid_out (valid_out),
+    .ready_out (ready_out),
     .error (error)
 );
 
@@ -55,19 +59,23 @@ end
 
 initial begin
     rst = 1;
-    signal_in = 32'b11111111111111111111111111111111;
+    ready_in = 1;
+    valid_in = 1;
+    signal_in = 32'b11111111111111111111111111111110;
     #20 rst = 0;
 end
 
 always begin
-    #10 signal_in = signal_in - 1;
+    #10 if(ready_out) begin
+        signal_in = signal_in - 1;
+    end
 end
 
 // Main Functionality
 
 initial begin
     qam = 0;
-    #800 $finish;
+    #1500 $finish;
 end
 
 endmodule

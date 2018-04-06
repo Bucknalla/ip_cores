@@ -212,10 +212,10 @@ always @( posedge S_AXI_ACLK )
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
-      slv_reg0 <= 0;
+      slv_reg0 <= 0; // QAM Selector : 0 - BPSK, 1 - QAM4, 2 - QAM 16
       slv_reg1 <= 0;
       slv_reg2 <= 0;
-      slv_reg3 <= 0;
+      slv_reg3 <= 0; // Address Store
     end 
   else begin
     if (slv_reg_wren)
@@ -365,7 +365,8 @@ begin
         2'h0   : reg_data_out <= slv_reg0;
         2'h1   : reg_data_out <= slv_reg1;
         2'h2   : reg_data_out <= slv_reg2;
-        2'h3   : reg_data_out <= slv_reg3;
+        2'h3   : reg_data_out <= 32'h00000002; // Used to check address of QAM
+//        2'h3   : reg_data_out <= slv_reg3;
         default : reg_data_out <= 0;
       endcase
 end

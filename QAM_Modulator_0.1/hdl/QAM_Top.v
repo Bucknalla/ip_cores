@@ -24,72 +24,92 @@ module qam_top(
     input rst, // Active High
     input [31:0] signal_in, 
     input [2:0] qam,
-    output [31:0] signal_out,
-    output reg ready,
-    output reg valid,
+    output wire [31:0] signal_out,
+    output reg ready_out,
+    input ready_in,
+    input valid_in,
+    output reg valid_out,
     output reg error
 );
     
+reg [2:0] qam_state = 0;    
 reg [31:0] signal_in_mod;
-wire mod_ready;
 reg select_qam_2, select_qam_4, select_qam_16 = 1'b0;
 reg [2:0] bit_shift = 1;
-reg [4:0] bit_counter = 0;
+reg [5:0] bit_counter = 0;
 
-//always @ (posedge ready) begin
-//    case (qam)
-//        0 : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b100001; 
-//        1 : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b010010; 
-//        2 : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b001100; 
-//        default : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b100001; 
-//    endcase
-//end
+wire [31:0] signal_out_2, signal_out_4, signal_out_16;
 
+assign signal_out = (qam == 0) ? signal_out_2 : 
+                    (qam == 1) ? signal_out_4 : 
+                    (qam == 2) ? signal_out_16 : 
+                                            0;
+                    
 always @ (posedge clk) begin
     if (rst) begin
-        ready <= 0;
-        valid <= 0;
+        ready_out <= 0;
+        valid_out <= 0;
+        bit_counter <= 0;
         error <= 0;
         signal_in_mod <= signal_in;
         {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b100001; 
     end
-    else begin
-        if (mod_ready) begin
-            if ((bit_counter > 31) | (bit_counter == 0)) begin
-                ready <= 1;   
-                bit_counter <= 1;
-                valid <= 0;
-                signal_in_mod <= signal_in;
-            end
-            else begin
-                ready <= 0;
-                bit_counter <= bit_counter + bit_shift;
-                valid <= 1;
-                signal_in_mod <= signal_in_mod >> bit_shift;
-            end
+    else if (ready_in & valid_in) begin
+        
+        if (bit_counter >= 32) begin
+            ready_out <= 1;   
+            bit_counter <= 1;
+            valid_out <= 0;
+            signal_in_mod <= signal_in;
+        end
+        else if(bit_counter == 0) begin
+            signal_in_mod <= signal_in;
+            bit_counter <= 1;
+            ready_out <= 0;   
+            valid_out <= 1;
         end
         else begin
-            valid <= 0;
-            error <= 1;
+            ready_out <= 0;
+            bit_counter <= bit_counter + bit_shift;
+            valid_out <= 1;
+            signal_in_mod <= signal_in_mod >> bit_shift;
         end
-        if (ready) begin
+        
         case (qam)
-            0 : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b100001; 
-            1 : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b010010; 
-            2 : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b001100; 
-            default : {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b100001; 
+            0 : 
+                begin
+                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b100001; 
+                end
+            1 : 
+                begin 
+                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b010010; 
+
+                end
+            2 : 
+                begin
+                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b001100;
+                end
+            default : 
+                begin
+                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b100001;
+                end
         endcase
-        end
+        
+    end
+    else begin
+        valid_out <= 0;
+        error <= 1;
     end
 end
+    
     
 qam_2 qam2 (
     .clk (clk),
     .rst (rst),
     .select (select_qam_2),
     .ready (mod_ready),
-    .signal_in (signal_in_mod[31]),
-    .signal_out (signal_out)
+    .signal_in (signal_in_mod[0]),
+    .signal_out (signal_out_2)
 );
     
 qam_4 qam4 (
@@ -97,17 +117,17 @@ qam_4 qam4 (
     .rst (rst),
     .select (select_qam_4),
     .ready (mod_ready),
-    .signal_in (signal_in_mod[31:30]),
-    .signal_out (signal_out)
+    .signal_in (signal_in_mod[1:0]),
+    .signal_out (signal_out_4)
 );
 
-qam_16 qam16 (
-    .clk (clk),
-    .rst (rst),
-    .select (select_qam_16),
-    .ready (mod_ready),
-    .signal_in (signal_in_mod[31:28]),
-    .signal_out (signal_out)
-);   
+//qam_16 qam16 (
+//    .clk (clk),
+//    .rst (rst),
+//    .select (select_qam_16),
+//    .ready (mod_ready),
+//    .signal_in (signal_in_mod[31:28]),
+//    .signal_out (signal_out_16)
+//);   
     
 endmodule

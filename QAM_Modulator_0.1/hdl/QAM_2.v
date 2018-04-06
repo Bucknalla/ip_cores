@@ -25,23 +25,24 @@ module qam_2(
     input rst, 
     input select,
     input signal_in,
-    output wire [31:0] signal_out,
+    output [31:0] signal_out,
     output reg ready
     );
     
-reg [31:0] signal_out_mod;
-assign signal_out = signal_out_mod;
-
+assign signal_out = (signal_in == 0) ? 32'b00000000000000000000000000000011 : 
+                    (signal_in == 1) ? 32'b00000000000000000000111111111111 : 
+                                                0;
+    
 always @ (posedge clk) begin
-    if (rst) begin
-        signal_out_mod <= 0;
-        ready <= 1'b1;
-    end
-    if (select == 1) begin
-        case (signal_in) 
-            0 : signal_out_mod <= 32'b00000000000000000000000000000001; // 1 + 0j
-            1 : signal_out_mod <= 32'b00000000000000000000111111111111; // -1 + 0j
-        endcase 
+    if (select) begin
+        if (rst) begin
+//            signal_out <= 0;
+            ready <= 1'b1;
+        end
+//        case (signal_in) 
+//            0 : signal_out <= 32'b00000000000000000000000000000011; // 1 + 0j
+//            1 : signal_out <= 32'b00000000000000000000111111111111; // -1 + 0j
+//        endcase 
         ready <= 1'b1;
     end
     else begin
