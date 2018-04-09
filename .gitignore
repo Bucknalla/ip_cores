@@ -84,3 +84,7 @@
 !*.elf
 !*.bmm
 !*.xmp
+
+*.jou
+*.log
+*.str
