@@ -165,7 +165,7 @@
     Pilot_Top pilot(
        .clk (S_AXIS_ACLK),
        .rst (S_AXIS_ARESETN),
-       .ready (S_AXIS_TREADY),
+       .ready_in (S_AXIS_TREADY),
        .signal_in (S_AXIS_TDATA)
     );
 

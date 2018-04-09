@@ -225,7 +225,7 @@
         
         Pilot_Top pilot(
            .signal_out (M_AXIS_TDATA),
-           .valid (M_AXIS_TVALID)
+           .valid_out (M_AXIS_TVALID)
         );
     
         // User logic ends
