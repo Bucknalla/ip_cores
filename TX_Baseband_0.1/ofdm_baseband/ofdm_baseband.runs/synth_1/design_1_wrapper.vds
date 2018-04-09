@@ -1,0 +1,1042 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Apr  9 15:08:34 2018
+# Process ID: 15743
+# Current directory: /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1
+# Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/design_1_wrapper.vds
+# Journal file: /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/alex/vivado/ip_repo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/alex/vivado/ip_repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2016.4/data/ip'.
+Command: synth_design -top design_1_wrapper -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15753 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Pilot_Insertion_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Pilot_Insertion_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:64]
+WARNING: [Synth 8-2507] parameter declaration becomes local in QAM_Modulator_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXIS.v:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in QAM_Modulator_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_M00_AXIS.v:64]
+WARNING: [Synth 8-2611] redeclaration of ansi port preamble_flag is not allowed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/preamble.v:46]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Preamble_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Preamble_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:64]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Cyclic_Prefix_v0_1_S00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:53]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Cyclic_Prefix_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:64]
+WARNING: [Synth 8-2507] parameter declaration becomes local in FFT_Controller_v0_1_M00_AXIS with formal parameter declaration list [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_M00_AXIS.v:64]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1148.500 ; gain = 218.039 ; free physical = 1222 ; free virtual = 9309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
+INFO: [Synth 8-638] synthesizing module 'design_1_Cyclic_Prefix_0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Cyclic_Prefix_0_1/synth/design_1_Cyclic_Prefix_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_S00_AXI' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-638] synthesizing module 'CP_Top' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/CP_Top.v:23]
+INFO: [Synth 8-638] synthesizing module 'fifo_generator_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:74]
+INFO: [Synth 8-3491] module 'fifo_generator_v13_1_3' declared at '/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564d/hdl/fifo_generator_v13_1_vhsyn_rfs.vhd:38271' bound to instance 'U0' of component 'fifo_generator_v13_1_3' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:540]
+INFO: [Synth 8-256] done synthesizing module 'fifo_generator_0' (30#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/synth/fifo_generator_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'CP_Top' (31#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/CP_Top.v:23]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 12 connections, but only 2 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_S00_AXI' (32#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_S00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 12 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_S00_AXIS' (33#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:106]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 12 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1_M00_AXIS' (34#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'cp' of module 'CP_Top' requires 12 connections, but only 4 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1.v:134]
+INFO: [Synth 8-256] done synthesizing module 'Cyclic_Prefix_v0_1' (35#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1.v:4]
+WARNING: [Synth 8-350] instance 'inst' of module 'Cyclic_Prefix_v0_1' requires 37 connections, but only 36 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Cyclic_Prefix_0_1/synth/design_1_Cyclic_Prefix_0_1.v:172]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Cyclic_Prefix_0_1' (36#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Cyclic_Prefix_0_1/synth/design_1_Cyclic_Prefix_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'design_1_FFT_Controller_0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_FFT_Controller_0_1/synth/design_1_FFT_Controller_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'FFT_Controller_v0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'FFT_Controller_v0_1_S00_AXI' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_S00_AXI.v:395]
+INFO: [Synth 8-638] synthesizing module 'controller' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/controller.v:23]
+INFO: [Synth 8-256] done synthesizing module 'controller' (37#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/controller.v:23]
+WARNING: [Synth 8-350] instance 'axi' of module 'controller' requires 9 connections, but only 4 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_S00_AXI.v:395]
+INFO: [Synth 8-256] done synthesizing module 'FFT_Controller_v0_1_S00_AXI' (38#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'FFT_Controller_v0_1_M00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_M00_AXIS.v:109]
+WARNING: [Synth 8-350] instance 'axi' of module 'controller' requires 9 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_M00_AXIS.v:228]
+INFO: [Synth 8-256] done synthesizing module 'FFT_Controller_v0_1_M00_AXIS' (39#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1.v:103]
+WARNING: [Synth 8-350] instance 'axi' of module 'controller' requires 9 connections, but only 2 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1.v:103]
+WARNING: [Synth 8-3848] Net m00_axis_tstrb in module/entity FFT_Controller_v0_1 does not have driver. [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1.v:55]
+INFO: [Synth 8-256] done synthesizing module 'FFT_Controller_v0_1' (40#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'design_1_FFT_Controller_0_1' (41#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_FFT_Controller_0_1/synth/design_1_FFT_Controller_0_1.v:56]
+WARNING: [Synth 8-350] instance 'FFT_Controller_0' of module 'design_1_FFT_Controller_0_1' requires 28 connections, but only 26 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:314]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:621]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_P3KODA' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1527]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_P3KODA' (42#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1527]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1E9HINZ' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1673]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1E9HINZ' (43#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1673]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_QJ8X5P' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1819]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_QJ8X5P' (44#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1819]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1D3I8FW' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1965]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1D3I8FW' (45#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:1965]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_MPPXSO' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:2111]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_MPPXSO' (46#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:2111]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_19B3V30' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:2257]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_19B3V30' (47#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:2257]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_axi_crossbar' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_crossbar_sasd' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_addr_decoder' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (48#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (49#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (49#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (49#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' (49#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' (49#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_addr_decoder' (50#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_decerr_slave' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_decerr_slave' (51#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_addr_arbiter_sasd' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_addr_arbiter_sasd' (52#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_splitter' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_splitter' (53#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-638] synthesizing module 'axi_crossbar_v2_1_12_splitter__parameterized0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_splitter__parameterized0' (53#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (54#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (54#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (54#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (54#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-638] synthesizing module 'axi_register_slice_v2_1_11_axic_register_slice' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/0b6b/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-256] done synthesizing module 'axi_register_slice_v2_1_11_axic_register_slice' (55#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/0b6b/hdl/axi_register_slice_v2_1_vl_rfs.v:85]
+INFO: [Synth 8-638] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (55#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/7ee0/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_crossbar_sasd' (56#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+INFO: [Synth 8-256] done synthesizing module 'axi_crossbar_v2_1_12_axi_crossbar' (57#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xbar_0' (58#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:59]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (59#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:621]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconcat_0_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'xlconcat' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/2e37/xlconcat.v:14]
+INFO: [Synth 8-256] done synthesizing module 'xlconcat' (60#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/2e37/xlconcat.v:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xlconcat_0_0' (61#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'design_1_xfft_0_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xfft_0_0/synth/design_1_xfft_0_0.vhd:83]
+INFO: [Synth 8-3491] module 'xfft_v9_0_11' declared at '/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/3950/hdl/xfft_v9_0_vh_rfs.vhd:101787' bound to instance 'U0' of component 'xfft_v9_0_11' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xfft_0_0/synth/design_1_xfft_0_0.vhd:178]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xfft_0_0' (119#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xfft_0_0/synth/design_1_xfft_0_0.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'design_1_Pilot_Insertion_0_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Pilot_Insertion_0_0/synth/design_1_Pilot_Insertion_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1_S00_AXI' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Top' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Top.v:23]
+INFO: [Synth 8-4471] merging register 'valid_reg' into 'ready_reg' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Top.v:43]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Top' (120#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Top.v:23]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1_S00_AXI' (121#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1_S00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 4 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:165]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1_S00_AXIS' (122#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_S00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'Pilot_Insertion_v0_1_M00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:106]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 2 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:226]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1_M00_AXIS' (123#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'pilot' of module 'Pilot_Top' requires 11 connections, but only 2 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1.v:128]
+INFO: [Synth 8-256] done synthesizing module 'Pilot_Insertion_v0_1' (124#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/4046/hdl/Pilot_Insertion_v0_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Pilot_Insertion_0_0' (125#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Pilot_Insertion_0_0/synth/design_1_Pilot_Insertion_0_0.v:56]
+WARNING: [Synth 8-350] instance 'pilot_insertion' of module 'design_1_Pilot_Insertion_0_0' requires 37 connections, but only 36 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:501]
+INFO: [Synth 8-638] synthesizing module 'design_1_Preamble_0_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Preamble_0_0/synth/design_1_Preamble_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'Preamble_v0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'Preamble_v0_1_S00_AXI' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-638] synthesizing module 'preamble' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/preamble.v:23]
+INFO: [Synth 8-256] done synthesizing module 'preamble' (126#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/preamble.v:23]
+WARNING: [Synth 8-350] instance 'pre' of module 'preamble' requires 13 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-256] done synthesizing module 'Preamble_v0_1_S00_AXI' (127#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'Preamble_v0_1_S00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:4]
+WARNING: [Synth 8-689] width (1) of port connection 'signal_in' does not match port width (32) of module 'preamble' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:166]
+WARNING: [Synth 8-350] instance 'pre' of module 'preamble' requires 13 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3848] Net s00_axis_tdata in module/entity Preamble_v0_1_S00_AXIS does not have driver. [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:166]
+WARNING: [Synth 8-3848] Net s00_axis_tvalid in module/entity Preamble_v0_1_S00_AXIS does not have driver. [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:167]
+INFO: [Synth 8-256] done synthesizing module 'Preamble_v0_1_S00_AXIS' (128#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_S00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'Preamble_v0_1_M00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:107]
+WARNING: [Synth 8-689] width (1) of port connection 'signal_out' does not match port width (32) of module 'preamble' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:228]
+WARNING: [Synth 8-350] instance 'pre' of module 'preamble' requires 13 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:227]
+WARNING: [Synth 8-3848] Net m00_axis_tready in module/entity Preamble_v0_1_M00_AXIS does not have driver. [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:230]
+INFO: [Synth 8-256] done synthesizing module 'Preamble_v0_1_M00_AXIS' (129#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'pre' of module 'preamble' requires 13 connections, but only 4 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1.v:130]
+INFO: [Synth 8-256] done synthesizing module 'Preamble_v0_1' (130#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/d52a/hdl/Preamble_v0_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Preamble_0_0' (131#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_Preamble_0_0/synth/design_1_Preamble_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'design_1_QAM_Modulator_0_0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_QAM_Modulator_0_0/synth/design_1_QAM_Modulator_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'QAM_Modulator_v0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'QAM_Modulator_v0_1_S00_AXI' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXI.v:223]
+INFO: [Synth 8-226] default block is never used [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXI.v:364]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-638] synthesizing module 'qam_top' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Top.v:22]
+INFO: [Synth 8-638] synthesizing module 'qam_2' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'qam_2' (132#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'qam_top' (133#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Top.v:22]
+WARNING: [Synth 8-350] instance 'qam' of module 'qam_top' requires 8 connections, but only 1 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXI.v:394]
+INFO: [Synth 8-256] done synthesizing module 'QAM_Modulator_v0_1_S00_AXI' (134#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXI.v:4]
+INFO: [Synth 8-638] synthesizing module 'QAM_Modulator_v0_1_S00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'qam' of module 'qam_top' requires 8 connections, but only 4 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXIS.v:165]
+INFO: [Synth 8-256] done synthesizing module 'QAM_Modulator_v0_1_S00_AXIS' (135#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_S00_AXIS.v:4]
+INFO: [Synth 8-638] synthesizing module 'QAM_Modulator_v0_1_M00_AXIS' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_M00_AXIS.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_M00_AXIS.v:106]
+WARNING: [Synth 8-350] instance 'qam' of module 'qam_top' requires 8 connections, but only 2 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_M00_AXIS.v:226]
+INFO: [Synth 8-256] done synthesizing module 'QAM_Modulator_v0_1_M00_AXIS' (136#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1_M00_AXIS.v:4]
+WARNING: [Synth 8-350] instance 'qam' of module 'qam_top' requires 8 connections, but only 3 given [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1.v:127]
+INFO: [Synth 8-256] done synthesizing module 'QAM_Modulator_v0_1' (137#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/9874/hdl/QAM_Modulator_v0_1.v:4]
+INFO: [Synth 8-256] done synthesizing module 'design_1_QAM_Modulator_0_0' (138#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_QAM_Modulator_0_0/synth/design_1_QAM_Modulator_0_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconcat_0_1' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.v:58]
+INFO: [Synth 8-638] synthesizing module 'xlconcat__parameterized0' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/2e37/xlconcat.v:14]
+INFO: [Synth 8-256] done synthesizing module 'xlconcat__parameterized0' (138#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/2e37/xlconcat.v:14]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xlconcat_0_1' (139#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_1/synth/design_1_xlconcat_0_1.v:58]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (140#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1.v:13]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (141#1) [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat__parameterized0 has unconnected port In31[0]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXIS has unconnected port S_AXIS_TLAST
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXIS has unconnected port S_AXIS_TVALID
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design QAM_Modulator_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[31]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[30]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[29]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[28]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[27]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[26]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[25]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[24]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[23]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[22]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[21]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[20]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[19]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[18]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[17]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[16]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[15]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[14]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[13]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[12]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[11]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[10]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[9]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[8]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[7]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[6]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[5]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[4]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[3]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[2]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[1]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TDATA[0]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design Preamble_v0_1_S00_AXI has unconnected port S_AXI_ARPROT[0]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[4]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[3]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[2]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[1]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port frame_size[0]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[31]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[30]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[29]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[28]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[27]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[26]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[25]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[24]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[23]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[22]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[21]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[20]
+WARNING: [Synth 8-3331] design Pilot_Top has unconnected port pilot_value[19]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1428.953 ; gain = 498.492 ; free physical = 944 ; free virtual = 9033
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:rst to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[31] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[30] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[29] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[28] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[27] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[26] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[25] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[24] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[23] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[22] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[21] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[20] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[19] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[18] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[17] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[16] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[15] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[14] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[13] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[12] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[11] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[10] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[9] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[8] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[7] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[6] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[5] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[4] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[3] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[2] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[1] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[0] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:ready_in to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:valid_in to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXI.v:394]
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:rst to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[12] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[11] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[10] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[9] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[8] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[7] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[6] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[5] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[4] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[3] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[2] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[1] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[0] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[12] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[11] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[10] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[9] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[8] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[7] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[6] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[5] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[4] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[3] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[2] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[1] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:frame_length[0] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:ready_in to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v:165]
+WARNING: [Synth 8-3295] tying undriven pin cp:clk to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:rst to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[31] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[30] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[29] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[28] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[27] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[26] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[25] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[24] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[23] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[22] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[21] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[20] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[19] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[18] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[17] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[16] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[15] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[14] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[13] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[12] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[11] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[10] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[9] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[8] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[7] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[6] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[5] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[4] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[3] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[2] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[1] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:signal_in[0] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+WARNING: [Synth 8-3295] tying undriven pin cp:cp_length[12] to constant 0 [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/564c/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v:226]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1428.953 ; gain = 498.492 ; free physical = 943 ; free virtual = 9033
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 967 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/cp/fifo/U0'
+Finished Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/cp/fifo/U0'
+Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/fifo/U0'
+Finished Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/fifo/U0'
+Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/fifo/U0'
+Finished Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/fifo/U0'
+Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/cp/fifo/U0'
+Finished Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc] for cell 'design_1_i/Cyclic_Prefix_0/inst/cp/fifo/U0'
+Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 46 instances were transformed.
+  FDE => FDRE: 42 instances
+  RAMB18SDP => RAMB18E1: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1630.828 ; gain = 0.000 ; free physical = 911 ; free virtual = 9001
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 912 ; free virtual = 9001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 912 ; free virtual = 9001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/fifo/U0. (constraint file  /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc, line 45).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/fifo/U0. (constraint file  /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc, line 45).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/cp/fifo/U0. (constraint file  /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc, line 45).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/cp/fifo/U0. (constraint file  /home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/dont_touch.xdc, line 45).
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/cp/fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/Cyclic_Prefix_0/inst/cp/fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/FFT_Controller_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/error_bus. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/ifft. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/pilot_insertion. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/preamble. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/qam_modulator. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/status_bus. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 912 ; free virtual = 9001
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/896d/hdl/axi_crossbar_v2_1_vl_rfs.v:3572]
+INFO: [Synth 8-5544] ROM "f_mux_return5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return4" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return4" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return5" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return4" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "event_tlast_unexpected" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ret" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ready" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "bit_shift" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "select_qam_2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mst_exec_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "count" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "tx_done" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:33 ; elapsed = 00:01:34 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 901 ; free virtual = 8990
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/0b6b/hdl/axi_register_slice_v2_1_vl_rfs.v:318]
+INFO: [Synth 8-5546] ROM "axi_wrapper/ret" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/nfft_from_port_cp.i_nfft_gen[4].gen_reset.i_nfft_reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/nfft_from_port_cp.i_nfft_gen[3].gen_set.i_nfft_reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/nfft_from_port_cp.i_nfft_gen[2].gen_reset.i_nfft_reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/nfft_from_port_cp.i_nfft_gen[1].gen_set.i_nfft_reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/nfft_from_port_cp.i_nfft_gen[0].gen_reset.i_nfft_reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/out_addr_actual_reg[9]) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[0][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized6.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[1][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized6.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[2][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized6.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[3][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized6.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[4][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized6.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[0][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized9.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[1][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized9.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[2][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized9.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[3][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized9.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[4][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized9.
+INFO: [Synth 8-3332] Sequential element (f0.srl_sig_reg[5][0]) is unused and will be removed from module c_shift_ram_v12_0_10_legacy__parameterized9.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre0) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[2].i_fdre1) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre0) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[3].i_fdre1) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre0) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_xk_index/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[4].i_fdre1) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_0i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_1i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_2i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3r/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[24].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[23].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[22].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/scaler_gen.scaler_3i/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/rev_out.loading_d_reg) is unused and will be removed from module xfft_v9_0_11_viv.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/rd_en_reg )
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/wr_en_reg' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/ready_out_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/din_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/rst_fifo_reg )
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[0]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[1]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[2]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[3]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[4]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[4]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[5]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[5]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[6]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[6]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[7]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[7]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[8]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[8]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[9]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[9]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[10]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[11]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[11]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[12]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[12]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[13]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[13]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[14]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[14]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[15]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[16]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[16]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[17]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[18]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[18]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[19]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[19]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[20]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[20]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[21]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[21]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[22]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[22]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[23]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[23]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[24]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[24]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[25]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[25]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[26]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[26]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[27]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[27]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[28]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[28]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[29]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[29]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[30]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[30]' (FDE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/din_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/cp/din_reg[31] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/cp_flag_reg' (FDRE) to 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/valid_out_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/cp_flag_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/valid_out_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_M00_AXIS_inst/cp/out_data_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXIS_inst/cp/ready_out_reg )
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'design_1_i/Cyclic_Prefix_0/inst/Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/Cyclic_Prefix_v0_1_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/Cyclic_Prefix_0/inst/cp/error_reg' (FDRE) to 'design_1_i/Cyclic_Prefix_0/inst/cp/cp_flag_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/Cyclic_Prefix_0/\inst/cp/cp_flag_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/data_out_reg[23] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/FFT_Controller_0/inst/FFT_Controller_v0_1_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'design_1_i/FFT_Controller_0/inst/FFT_Controller_v0_1_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/FFT_Controller_0/inst/FFT_Controller_v0_1_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'design_1_i/FFT_Controller_0/inst/FFT_Controller_v0_1_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/FFT_Controller_0/\inst/FFT_Controller_v0_1_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ifft/U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P4.p4/nor_gate[0].pre_tw2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][15]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][17]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][18]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][19]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][20]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][21]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][22]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][23]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][15]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][17]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][18]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][19]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][20]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][21]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][22]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][23]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult3/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][15]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][17]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][18]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][19]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][20]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][21]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][22]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][23]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult1/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iBdelx[0].iBdely[0].need_delay_line.Bdelay/dN.std_srl.shift_reg_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[0]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[1]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[2]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[3]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[3]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[4]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[5]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[5]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[6]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[7]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[7]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[8]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[8]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[9]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[9]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[10]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[10]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[11]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[11]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[12]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[12]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[13]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[13]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[14]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[14]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[15]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[16]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[16]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[17]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[17]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[18]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[18]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[19]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[19]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[20]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[20]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[21]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[21]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[22]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[22]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[23]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[23]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[24]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult3_preadder_d_minus_a.mult3/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[24]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/mult1_preadder_d_plus_a.mult1/mult/use_prim.iAdelx[0].iAdely[0].use_delay_line.Adelay/d1.dout_i_reg[15]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[1][0]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[1][1]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[1][2]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_3.reg_mult3_preadd_d/dN.std_srl.shift_reg_reg[1][3]' (FDE) to 'design_1_i/ifft/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/single_channel.datapath/pe/mult_gen.Mult2/i_cmpy/three_mult_structure.use_dsp.i_dsp48/dsp_preadder_1.reg_mult1_preadd_d/dN.std_srl.shift_reg_reg[1][3]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ifft/U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/load_state_s_1_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ifft/U0/i_synth/\axi_wrapper/gen_nrt_events.event_status_channel_halt_int_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ifft/U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P4.p4/pre_tw2_d_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/ifft/U0/i_synth/\xfft_inst/non_floating_point.arch_b.xfft_inst/control/twiddle_address_generator/N_MAX_P4.p4/tw2_reg_loop[0].tw2_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/pilot_insertion/\inst/Pilot_Insertion_v0_1_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/pilot_insertion/\inst/Pilot_Insertion_v0_1_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/pilot_insertion/\inst/pilot/error_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_i/pilot_insertion/\inst/pilot/pilot_inserted_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/preamble/\inst/pre/cnt_reg[6] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:40 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 889 ; free virtual = 8978
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:48 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 847 ; free virtual = 8936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:49 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 845 ; free virtual = 8935
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:01:50 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 822 ; free virtual = 8911
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 823 ; free virtual = 8912
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/FFT_Controller_v0_1_M00_AXIS_inst/axis_tvalid with 1st driver pin 'design_1_i/FFT_Controller_0/i_513_74/O' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/FFT_Controller_v0_1_M00_AXIS.v:106]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net inst/FFT_Controller_v0_1_M00_AXIS_inst/axis_tvalid with 2nd driver pin 'design_1_i/FFT_Controller_0/inst/FFT_Controller_v0_1_M00_AXIS_inst/axi/valid_out_reg/Q' [/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.srcs/sources_1/bd/design_1/ipshared/8cab/hdl/controller.v:40]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:50 ; elapsed = 00:01:51 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 823 ; free virtual = 8912
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-115] binding instance 'i_513_0' in module 'Cyclic_Prefix_v0_1' to reference 'Cyclic_Prefix_v0_1_S00_AXIS' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_513_0' in module 'Cyclic_Prefix_v0_1_S00_AXI' to reference 'CP_Top__xdcDup__3' which has no pins
+WARNING: [Synth 8-115] binding instance 'i_513_0' in module 'Cyclic_Prefix_v0_1_S00_AXIS' to reference 'CP_Top__xdcDup__2' which has no pins
+WARNING: [Synth 8-115] binding instance 'Cyclic_Prefix_v0_1_M00_AXIS_insti_513_0' in module 'Cyclic_Prefix_v0_1_M00_AXIS' to reference 'CP_Top__xdcDup__1' which has no pins
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 822 ; free virtual = 8912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 823 ; free virtual = 8912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 822 ; free virtual = 8912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 823 ; free virtual = 8912
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     1|
+|2     |CARRY4     |    69|
+|3     |DSP48E1    |     6|
+|4     |DSP48E1_1  |     3|
+|5     |LUT1       |   158|
+|6     |LUT2       |   426|
+|7     |LUT3       |   826|
+|8     |LUT4       |   335|
+|9     |LUT5       |   224|
+|10    |LUT6       |   723|
+|11    |MUXCY      |   487|
+|12    |MUXF7      |    18|
+|13    |RAMB18E1   |     4|
+|14    |RAMB18E1_1 |     3|
+|15    |RAMB18SDP  |     4|
+|16    |RAMB36E1   |     4|
+|17    |RAMB36E1_1 |    24|
+|18    |SRL16E     |   370|
+|19    |SRLC32E    |     4|
+|20    |XORCY      |   367|
+|21    |FDE        |    41|
+|22    |FDRE       |  3694|
+|23    |FDSE       |    87|
+|24    |IBUF       |   118|
+|25    |OBUF       |    93|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 822 ; free virtual = 8912
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 982 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:40 ; elapsed = 00:01:41 . Memory (MB): peak = 1630.828 ; gain = 362.672 ; free physical = 822 ; free virtual = 8912
+Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1630.828 ; gain = 700.367 ; free physical = 822 ; free virtual = 8911
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1130 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 202 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 157 instances
+  FDE => FDRE: 41 instances
+  RAMB18SDP => RAMB18E1: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+514 Infos, 249 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:51 ; elapsed = 00:01:51 . Memory (MB): peak = 1652.352 ; gain = 600.652 ; free physical = 823 ; free virtual = 8913
+INFO: [Common 17-1381] The checkpoint '/home/alex/vivado/ip_repo/TX_Baseband_0.1/ofdm_baseband/ofdm_baseband.runs/synth_1/design_1_wrapper.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1676.363 ; gain = 0.000 ; free physical = 821 ; free virtual = 8913
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  9 15:10:36 2018...

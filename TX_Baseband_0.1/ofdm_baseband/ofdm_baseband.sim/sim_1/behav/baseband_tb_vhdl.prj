@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl fifo_generator_v13_1_3  "../../../ofdm_baseband.srcs/sources_1/bd/design_1/ip/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/hdl/fifo_generator_v13_1_rfs.vhd"
+vhdl xil_defaultlib  "../../../ofdm_baseband.ip_user_files/bd/design_1/ip/design_1_xfft_0_0/sim/design_1_xfft_0_0.vhd"
+
+# Do not sort compile order
+nosort

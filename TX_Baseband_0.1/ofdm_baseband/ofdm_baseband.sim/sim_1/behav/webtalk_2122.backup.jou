@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Thu Apr  5 10:38:01 2018
+# Process ID: 2122
+# Current directory: /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ofdm_baseband/ofdm_baseband.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ofdm_baseband/ofdm_baseband.sim/sim_1/behav/xsim.dir/baseband_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ofdm_baseband/ofdm_baseband.sim/sim_1/behav/webtalk.log
+# Journal file: /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ofdm_baseband/ofdm_baseband.sim/sim_1/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ofdm_baseband/ofdm_baseband.sim/sim_1/behav/xsim.dir/baseband_tb_behav/webtalk/xsim_webtalk.tcl -notrace
