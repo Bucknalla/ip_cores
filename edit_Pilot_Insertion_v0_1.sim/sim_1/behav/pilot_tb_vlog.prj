@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../Pilot_Insertion_0.1/hdl/Pilot_Top.v"
+verilog xil_defaultlib  "../../../edit_Pilot_Insertion_v0_1.srcs/sim_1/new/pilot_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

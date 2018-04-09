@@ -24,41 +24,92 @@ module Pilot_Top(
     input clk,
     input rst, // Active High
     input [31:0] signal_in, 
-    input [4:0] frame_size,
-    input [3:0] pilot_interval,
+    input [12:0] frame_length,
+    input [12:0] pilot_interval,
     input [31:0] pilot_value,
     output reg [31:0] signal_out,
-    output reg ready,
-    output reg valid,
+    
+    output reg ready_out,
+    input ready_in,
+    output reg valid_out,
+    input valid_in,
+    
     output reg error,
-    output reg pilot_inserted
+    output reg pilot_inserted,
+    output reg frame_end = 0
 );
 
-reg [4:0] cnt = 0;
+reg [12:0] cnt_frame = 0;
+reg [12:0] cnt_pilot = 0;
 
 always @ (posedge clk) begin
     if(rst) begin
-        cnt <= 0;
-        ready <= 0;
-        valid <= 0;
+        cnt_pilot <= 0;
+        cnt_frame <= 0;
+        pilot_inserted <= 0;
+        frame_end <= 0;
+        ready_out <= 0;
+        valid_out <= 0;
         error <= 0;
-    end
-    else begin
-        valid <= 1;
-        if(cnt >= pilot_interval) begin
-            cnt <= 0;
-            ready <= 0;
+    end 
+    else if (ready_in & valid_in) begin
+        valid_out <= 1;
+
+        
+        
+        if(cnt_frame >= (frame_length - 1)) begin
+            cnt_frame <= 0;
+            frame_end <= 1;
+        end
+        else if(cnt_frame == 0) begin
+            cnt_frame <= cnt_frame + 1;
+            frame_end <= 1;
+        end
+        else begin
+            cnt_frame <= cnt_frame + 1;
+            frame_end <= 0;
+        end
+        
+
+        if(cnt_pilot >= (pilot_interval - 1)) begin
+            cnt_pilot <= 0;
+        end
+        else if((cnt_pilot % pilot_interval) == 0 ) begin
+            ready_out <= 0;
             signal_out <= pilot_value;
             pilot_inserted <= 1;
+            cnt_pilot <= cnt_pilot + 1;
         end
-        else
+        else begin
             pilot_inserted <= 0;
-            ready <= 1;
-            cnt <= cnt + 1;
+            ready_out <= 1;
+            cnt_pilot <= cnt_pilot + 1;
             signal_out <= signal_in;
         end
 
-
+        // if(cnt_pilot >= (pilot_interval - 1)) begin
+        //     cnt_pilot <= 0;
+        //     ready_out <= 0;
+        //     signal_out <= pilot_value;
+        //     pilot_inserted <= 1;
+        // end
+        // else if(cnt_pilot == 0) begin
+        //     cnt_pilot <= cnt_pilot + 1;
+        //     ready_out <= 0;
+        //     signal_out <= pilot_value;
+        //     pilot_inserted <= 1;
+        // end
+        // else begin
+        //     pilot_inserted <= 0;
+        //     ready_out <= 1;
+        //     cnt_pilot <= cnt_pilot + 1;
+        //     signal_out <= signal_in;
+        // end
+        
+    end
+    else begin
+        valid_out <= 0;
+    end
 end
 
 

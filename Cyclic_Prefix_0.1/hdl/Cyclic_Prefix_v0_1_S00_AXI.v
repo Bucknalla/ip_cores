@@ -365,7 +365,7 @@ begin
         2'h0   : reg_data_out <= slv_reg0;
         2'h1   : reg_data_out <= slv_reg1;
         2'h2   : reg_data_out <= slv_reg2;
-        2'h3   : reg_data_out <= slv_reg3;
+        2'h3   : reg_data_out <= 32'h00000004; // Address Reg
         default : reg_data_out <= 0;
       endcase
 end
@@ -392,8 +392,8 @@ end
 // Add user logic here
 
 CP_Top cp(
-    .cp_length (slv_reg0[31:0]),
-    .frame_length (slv_reg1[5:0])
+    .cp_length (slv_reg0[12:0]),
+    .frame_length (slv_reg1[12:0])
     );
     
     

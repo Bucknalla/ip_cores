@@ -4,36 +4,35 @@
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.cache/wt [current_project]
-set_property parent.project_path /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.xpr [current_project]
+set_property webtalk.parent_dir /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.cache/wt [current_project]
+set_property parent.project_path /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Cyclic_Prefix_0.1
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/QAM_Modulator_0.1
-  /home/alex/GitHub/parametric_qam/ip_repo/qam_mod_1.0
+  /home/alex/vivado/ip_repo/Cyclic_Prefix_0.1
+  /home/alex/vivado/ip_repo/QAM_Modulator_0.1
+  GitHub/parametric_qam/ip_repo/qam_mod_1.0
 } [current_project]
-set_property ip_output_repo /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.cache/ip [current_project]
+set_property ip_output_repo /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Cyclic_Prefix_0.1/hdl/CP_Top.v
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v
-  /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v
+  /home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/CP_Top.v
+  /home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXI.v
+  /home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_S00_AXIS.v
+  /home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1_M00_AXIS.v
+  /home/alex/vivado/ip_repo/Cyclic_Prefix_0.1/hdl/Cyclic_Prefix_v0_1.v
 }
-read_ip -quiet /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
-set_property used_in_implementation false [get_files -all /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc]
-set_property is_locked true [get_files /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+read_ip -quiet /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+set_property used_in_implementation false [get_files -all /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0/fifo_generator_0.xdc]
+set_property is_locked true [get_files /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
 
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp

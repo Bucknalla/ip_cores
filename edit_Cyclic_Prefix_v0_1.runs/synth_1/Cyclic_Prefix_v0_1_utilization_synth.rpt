@@ -1,8 +1,8 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.4 (lin64) Build 1756540 Mon Jan 23 19:11:19 MST 2017
-| Date         : Wed Apr  4 16:37:45 2018
-| Host         : Alex-Ubuntu running 64-bit Ubuntu 16.04.4 LTS
+| Date         : Mon Apr  9 14:27:34 2018
+| Host         : alex-warc running 64-bit Ubuntu 16.04.4 LTS
 | Command      : report_utilization -file Cyclic_Prefix_v0_1_utilization_synth.rpt -pb Cyclic_Prefix_v0_1_utilization_synth.pb
 | Design       : Cyclic_Prefix_v0_1
 | Device       : 7z020clg484-1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  475 |     0 |     53200 |  0.89 |
-|   LUT as Logic          |  475 |     0 |     53200 |  0.89 |
+| Slice LUTs*             |  474 |     0 |     53200 |  0.89 |
+|   LUT as Logic          |  474 |     0 |     53200 |  0.89 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  632 |     0 |    106400 |  0.59 |
-|   Register as Flip Flop |  632 |     0 |    106400 |  0.59 |
+| Slice Registers         |  601 |     0 |    106400 |  0.56 |
+|   Register as Flip Flop |  601 |     0 |    106400 |  0.56 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 36    |          Yes |         Set |            - |
-| 596   |          Yes |       Reset |            - |
+| 38    |          Yes |         Set |            - |
+| 563   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |  130 |     0 |       200 | 65.00 |
+| Bonded IOB                  |  132 |     0 |       200 | 66.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -115,7 +115,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |        16 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         4 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         4 |  0.00 |
@@ -148,20 +148,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  596 |        Flop & Latch |
+| FDRE     |  563 |        Flop & Latch |
 | LUT3     |  182 |                 LUT |
-| LUT4     |  138 |                 LUT |
-| LUT1     |  115 |                 LUT |
+| LUT4     |  134 |                 LUT |
+| LUT1     |  116 |                 LUT |
 | OBUF     |   82 |                  IO |
 | CARRY4   |   80 |          CarryLogic |
-| IBUF     |   48 |                  IO |
-| LUT6     |   47 |                 LUT |
-| FDSE     |   36 |        Flop & Latch |
-| LUT2     |   31 |                 LUT |
+| LUT5     |   52 |                 LUT |
+| IBUF     |   50 |                  IO |
+| FDSE     |   38 |        Flop & Latch |
+| LUT2     |   33 |                 LUT |
 | RAMB36E1 |   28 |        Block Memory |
-| LUT5     |   20 |                 LUT |
+| LUT6     |   16 |                 LUT |
 | RAMB18E1 |    4 |        Block Memory |
-| BUFG     |    1 |               Clock |
+| BUFG     |    2 |               Clock |
 +----------+------+---------------------+
 
 

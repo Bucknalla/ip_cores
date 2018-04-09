@@ -2,11 +2,11 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
-# Start of session at: Wed Apr  4 16:36:37 2018
-# Process ID: 30668
-# Current directory: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.runs/synth_1
+# Start of session at: Mon Apr  9 14:26:25 2018
+# Process ID: 12223
+# Current directory: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1
 # Command line: vivado -log Cyclic_Prefix_v0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Cyclic_Prefix_v0_1.tcl
-# Log file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.runs/synth_1/Cyclic_Prefix_v0_1.vds
-# Journal file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_Cyclic_Prefix_v0_1.runs/synth_1/vivado.jou
+# Log file: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/Cyclic_Prefix_v0_1.vds
+# Journal file: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source Cyclic_Prefix_v0_1.tcl -notrace

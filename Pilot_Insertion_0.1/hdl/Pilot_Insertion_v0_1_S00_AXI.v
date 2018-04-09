@@ -212,10 +212,10 @@ always @( posedge S_AXI_ACLK )
 begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
-      slv_reg0 <= 0;
-      slv_reg1 <= 0;
-      slv_reg2 <= 0;
-      slv_reg3 <= 0;
+      slv_reg0 <= 512; // Frame Length
+      slv_reg1 <= 128; // Pilot Interval
+      slv_reg2 <= 32'h1; // Pilot Value
+      slv_reg3 <= 0; // Address Register
     end 
   else begin
     if (slv_reg_wren)
@@ -365,7 +365,8 @@ begin
         2'h0   : reg_data_out <= slv_reg0;
         2'h1   : reg_data_out <= slv_reg1;
         2'h2   : reg_data_out <= slv_reg2;
-        2'h3   : reg_data_out <= slv_reg3;
+        2'h3   : reg_data_out <= 32'h00000003; // Address Reg
+//        2'h3   : reg_data_out <= slv_reg3;
         default : reg_data_out <= 0;
       endcase
 end
@@ -392,9 +393,9 @@ end
 // Add user logic here
 
 Pilot_Top pilot(
-    .frame_size (slv_reg0[4:0]),
-    .pilot_interval (slv_reg0[8:5]),
-    .pilot_value (slv_reg1[31:0])
+    .frame_length (slv_reg0[12:0]),
+    .pilot_interval (slv_reg1[12:0]),
+    .pilot_value (slv_reg2[31:0])
      );
     
     

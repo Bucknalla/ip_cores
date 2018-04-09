@@ -165,7 +165,7 @@
     preamble pre (
     	.signal_in(s00_axis_tdata),  // Slave AXUS Incoming Data
         .valid_in(s00_axis_tvalid),  // Slave AXIS Valid Incoming Data
-        .ready_in(s00_axis_tready)   // Slave AXIS Ready to Receive Incoming Data         
+        .ready_out(s00_axis_tready)   // Slave AXIS Ready to Receive Incoming Data         
     );
     
 

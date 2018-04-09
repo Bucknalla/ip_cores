@@ -226,8 +226,8 @@
 
     preamble pre (
 	    .signal_out(m00_axis_tdata), // Master AXIS Outgoing Data
-        .valid_out(m00_axis_tready), // Master AXIS Valid Outgoing Data
-        .ready_out(m00_axis_tvalid)  // Master AXIS Ready to Transmit Outgoing Dataa         
+        .valid_out(m00_axis_tvalid), // Master AXIS Valid Outgoing Data
+        .ready_in(m00_axis_tready)  // Master AXIS Ready to Transmit Outgoing Dataa         
     );
 
 	// User logic ends

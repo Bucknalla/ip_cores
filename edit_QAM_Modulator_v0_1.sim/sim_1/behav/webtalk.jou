@@ -2,11 +2,20 @@
 # Webtalk v2016.4 (64-bit)
 # SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
 # IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+<<<<<<< HEAD
 # Start of session at: Sun Apr  8 15:22:15 2018
 # Process ID: 7364
 # Current directory: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/sim_1/behav
 # Command line: wbtcv -mode batch -source /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/sim_1/behav/xsim.dir/qam_mod_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/sim_1/behav/webtalk.log
 # Journal file: /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/sim_1/behav/webtalk.jou
+=======
+# Start of session at: Mon Apr  9 10:06:04 2018
+# Process ID: 27184
+# Current directory: /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav
+# Command line: wbtcv -mode batch -source /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav/xsim.dir/qam_mod_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav/webtalk.log
+# Journal file: /home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav/webtalk.jou
+>>>>>>> f49c691c4c052854585028b7f4e9811ca63a8141
 #-----------------------------------------------------------
 source /home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/sim_1/behav/xsim.dir/qam_mod_tb_behav/webtalk/xsim_webtalk.tcl -notrace
