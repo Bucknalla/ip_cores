@@ -1,0 +1,4 @@
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+$finish called at time : 1500 ns : File "/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/QAM_TB.v" Line 78
+$finish called at time : 1500 ns : File "/home/alex/Documents/Vivado/ip_repo/GitHub/ip_cores/edit_QAM_Modulator_v0_1.sim/QAM_TB.v" Line 78
