@@ -76,23 +76,10 @@ always @ (posedge clk) begin
         end
         
         case (qam)
-            0 : 
-                begin
-                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b100001; 
-                end
-            1 : 
-                begin 
-                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b010010; 
-
-                end
-            2 : 
-                begin
-                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b001100;
-                end
-            default : 
-                begin
-                    {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b100001;
-                end
+            0 : {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b100001; 
+            1 : {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b010010; 
+            2 : {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b001100;
+            default : {select_qam_2, select_qam_4, select_qam_16, bit_shift} <= 6'b100001;
         endcase
         
     end

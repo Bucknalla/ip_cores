@@ -24,7 +24,7 @@ module qam_mod_tb();
 
 reg clk, rst;
 reg [31:0] signal_in;
-reg [2:0] qam;
+reg [2:0] qam = 3;
 wire [31:0] signal_out;
 wire ready_out;
 wire valid_out;
@@ -61,13 +61,13 @@ initial begin
     rst = 1;
     ready_in = 1;
     valid_in = 1;
-    signal_in = 32'b11111111111111111111111111111110;
+    signal_in = 32'b11101010101010101010101010101010;
     #20 rst = 0;
 end
 
 always begin
     #10 if(ready_out) begin
-        signal_in = signal_in - 1;
+        signal_in = signal_in + 1;
     end
 end
 
