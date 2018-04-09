@@ -59,14 +59,14 @@ always @ (posedge clk) begin
         if (bit_counter >= 32) begin
             ready_out <= 1;   
             bit_counter <= 1;
-            valid_out <= 0;
+            valid_out <= 1;
             signal_in_mod <= signal_in;
         end
         else if(bit_counter == 0) begin
             signal_in_mod <= signal_in;
             bit_counter <= 1;
             ready_out <= 0;   
-            valid_out <= 1;
+            valid_out <= 0;
         end
         else begin
             ready_out <= 0;
