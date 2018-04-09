@@ -24,11 +24,13 @@ module CP_Top(
     input clk,
     input rst, // Active High
     input [31:0] signal_in, 
-    input [31:0] cp_length,
-    input [5:0] frame_length,
+    input [12:0] cp_length,
+    input [12:0] frame_length,
     output [31:0] signal_out,
-    output reg ready,
-    output reg valid,
+    output reg ready_out,
+    input ready_in,
+    output reg valid_out,
+    input valid_in,
     output reg error,
     output reg cp_flag
 );
@@ -49,8 +51,8 @@ assign cp_length_link = cp_length;
 
 always @ (posedge clk) begin
    if(rst) begin
-       ready <= 0;
-       valid <= 0;
+       ready_out <= 0;
+       valid_out <= 0;
        error <= 0;
        wr_en <= 0;
        rd_en <= 0;
@@ -58,12 +60,12 @@ always @ (posedge clk) begin
        cp_flag <= 0;
        din <= signal_in;
    end
-   else begin
-       valid <= 1;
+   else if(ready_in & valid_in) begin
+       valid_out <= 1;
        
        if(cp_flag) begin
            out_data <= dout;
-           ready <= 0;
+           ready_out <= 0;
        end
        else begin
            out_data <= signal_in;
@@ -91,7 +93,7 @@ always @ (posedge clk) begin
            wr_en <= 1;
            cp_flag <= 0;
            
-           ready <= 1;
+           ready_out <= 1;
            rst_fifo <= 0;
            
            din <= signal_in;

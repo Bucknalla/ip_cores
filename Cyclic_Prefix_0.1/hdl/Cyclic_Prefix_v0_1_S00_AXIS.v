@@ -26,7 +26,7 @@
             // Data in
             input wire [C_S_AXIS_TDATA_WIDTH-1 : 0] S_AXIS_TDATA,
             // Byte qualifier
-            input wire [(C_S_AXIS_TDATA_WIDTH/8)-1 : 0] S_AXIS_TSTRB,
+//            input wire [(C_S_AXIS_TDATA_WIDTH/8)-1 : 0] S_AXIS_TSTRB,
             // Indicates boundary of last packet
             input wire  S_AXIS_TLAST,
             // Data is in valid

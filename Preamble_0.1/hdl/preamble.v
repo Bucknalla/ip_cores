@@ -29,9 +29,9 @@ module preamble(
     input       [31:0]  frame_length,
 
     input               valid_in,   // VALID on AXIS_S
-    input               ready_out,  // READY on AXIS_M (TX)
+    input               ready_in,  // READY on AXIS_M (TX)
 
-    output  reg         ready_in,   // READY on AXIS_S (RX)
+    output  reg         ready_out,   // READY on AXIS_S (RX)
     output  reg         valid_out,  // VALID on AXIS_M
 
     input       [31:0]  signal_in,
@@ -50,14 +50,14 @@ always @ (posedge clk) begin
     if (rst) begin
         cnt             <= 0;
         new_frame       <= 1;
-        ready_in        <= 0;
+        ready_out        <= 0;
         valid_out       <= 0;
         preamble_flag   <= 0;
         error           <= 0;
         rst_state       <= 1;
     end
 
-    else begin
+    else if(ready_in & valid_in) begin
         if (new_frame == 1) begin
 
             valid_out   <= 1;
@@ -67,14 +67,14 @@ always @ (posedge clk) begin
                 preamble_flag   <= 1;
                 signal_out      <= preamble_value;
                 preamble_flag   <= 1;
-                ready_in        <= 0;
+                ready_out        <= 0;
             end
 
             else begin
                 new_frame       <= 0;
                 preamble_flag   <= 0;
                 signal_out      <= signal_in;
-                ready_in        <= 1;
+                ready_out        <= 1;
                 cnt             <= 0;
             end
 
@@ -89,12 +89,12 @@ always @ (posedge clk) begin
                 new_frame       <= 1;
                 preamble_flag   <= 1;
                 cnt             <= 1;
-                ready_in        <= 0;
+                ready_out        <= 0;
                 signal_out      <= preamble_value;
             end
 
             else begin
-                ready_in        <= 1;
+                ready_out        <= 1;
                 cnt             <= cnt + 1;
                 signal_out      <= signal_in;
             end
