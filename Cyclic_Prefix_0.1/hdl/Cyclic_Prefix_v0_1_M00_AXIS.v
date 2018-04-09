@@ -225,7 +225,8 @@
     
     CP_Top cp(
        .signal_out (M_AXIS_TDATA),
-       .valid (M_AXIS_TVALID)
+       .valid_out (M_AXIS_TVALID),
+       .ready_in (M_AXIS_TREADY)
     );
 
     // User logic ends

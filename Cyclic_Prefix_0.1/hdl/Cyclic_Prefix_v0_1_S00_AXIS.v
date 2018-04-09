@@ -163,7 +163,8 @@
         // Add user logic here
         
         CP_Top cp(
-           .ready (S_AXIS_TREADY),
+           .ready_out (S_AXIS_TREADY),
+           .valid_in  (S_AXIS_TVALID),
            .signal_in (S_AXIS_TDATA)
         );
     

@@ -68,18 +68,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="hdl/fifo_generator_v13_1_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="synth/fifo_generator_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="fifo_generator_0.xml"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="doc/fifo_generator_v13_1_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="fifo_generator_0.vho"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="fifo_generator_0.veo"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="simulation/fifo_generator_vlog_beh.v"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="hdl/fifo_generator_v13_1_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="hdl/fifo_generator_v13_1_rfs.v"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="sim/fifo_generator_0.v"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="hdl/blk_mem_gen_v8_3_vhsyn_rfs.vhd"/>
-        <CompFileExtendedInfo CompFileName="fifo_generator_0.xci" FileRelPathName="fifo_generator_0/fifo_generator_0.xdc"/>
       </File>
       <File Path="$PPRDIR/Cyclic_Prefix_0.1/hdl/CP_Top.v">
         <FileInfo>
