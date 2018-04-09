@@ -1,9 +1,0 @@
-0.6
-2016.4
-Jan 23 2017
-19:19:20
-/home/alex/vivado/ip_repo/QAM_Modulator_0.1/hdl/QAM_2.v,1523030846,verilog,,,,qam_2,,,,,,,,
-/home/alex/vivado/ip_repo/QAM_Modulator_0.1/hdl/QAM_Top.v,1523030941,verilog,,,,qam_top,,,,,,,,
-/home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/QAM_TB.v,1523025468,verilog,,,,qam_mod_tb,,,,,,,,
-/home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.sim/sim_1/behav/glbl.v,1485222234,verilog,,,,glbl,,,,,,,,
-/home/alex/vivado/ip_repo/edit_QAM_Modulator_v0_1.srcs/sources_1/new/qam_4.v,1523011265,verilog,,,,qam_4,,,,,,,,
