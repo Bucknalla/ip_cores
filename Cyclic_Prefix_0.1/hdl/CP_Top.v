@@ -43,7 +43,7 @@ reg rst_fifo = 0;
 
 wire full, empty;
 
-wire [13:0] data_count;
+wire [12:0] data_count;
 wire [31:0] cp_length_link;
 
 assign signal_out = out_data;
@@ -112,7 +112,7 @@ fifo_generator_0 fifo(
   .dout (dout),
   .full (full),
   .empty (empty),
-  .wr_ack (wr_ack),
+ // .wr_ack (wr_ack),
   .data_count (data_count)
 );
 

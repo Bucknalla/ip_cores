@@ -56,8 +56,8 @@
 		input wire  s00_axis_aresetn,
 		output wire  s00_axis_tready,
 		input wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
-		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
-		input wire  s00_axis_tlast,
+//		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
+//		input wire  s00_axis_tlast,
 		input wire  s00_axis_tvalid,
 
 		// Ports of Axi Master Bus Interface M00_AXIS
@@ -65,10 +65,20 @@
 		input wire  m00_axis_aresetn,
 		output wire  m00_axis_tvalid,
 		output wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
-		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
+//		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
 		output wire  m00_axis_tlast,
 		input wire  m00_axis_tready
 	);
+	
+	
+	wire pilot_flag_wire, error_wire;
+    
+    wire [31:0] signal_in, signal_out;
+    
+    wire [31:0] frame_length, pilot_interval, pilot_value;
+    
+    wire ready_out,ready_in,valid_out,valid_in;
+    
 // Instantiation of Axi Bus Interface S00_AXI
 	Pilot_Insertion_v0_1_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
@@ -94,7 +104,10 @@
 		.S_AXI_RDATA(s00_axi_rdata),
 		.S_AXI_RRESP(s00_axi_rresp),
 		.S_AXI_RVALID(s00_axi_rvalid),
-		.S_AXI_RREADY(s00_axi_rready)
+		.S_AXI_RREADY(s00_axi_rready),
+		.frame_length (frame_length),
+        .pilot_interval (pilot_interval),
+        .pilot_value (pilot_value)
 	);
 
 // Instantiation of Axi Bus Interface S00_AXIS
@@ -105,9 +118,12 @@
 		.S_AXIS_ARESETN(s00_axis_aresetn),
 		.S_AXIS_TREADY(s00_axis_tready),
 		.S_AXIS_TDATA(s00_axis_tdata),
-		.S_AXIS_TSTRB(s00_axis_tstrb),
-		.S_AXIS_TLAST(s00_axis_tlast),
-		.S_AXIS_TVALID(s00_axis_tvalid)
+//		.S_AXIS_TSTRB(s00_axis_tstrb),
+//		.S_AXIS_TLAST(s00_axis_tlast),
+		.S_AXIS_TVALID(s00_axis_tvalid),
+		.ready_out(ready_out),
+		.valid_in(valid_in),
+		.data_in(signal_in)
 	);
 
 // Instantiation of Axi Bus Interface M00_AXIS
@@ -119,15 +135,33 @@
 		.M_AXIS_ARESETN(m00_axis_aresetn),
 		.M_AXIS_TVALID(m00_axis_tvalid),
 		.M_AXIS_TDATA(m00_axis_tdata),
-		.M_AXIS_TSTRB(m00_axis_tstrb),
+//		.M_AXIS_TSTRB(m00_axis_tstrb),
 		.M_AXIS_TLAST(m00_axis_tlast),
-		.M_AXIS_TREADY(m00_axis_tready)
+		.M_AXIS_TREADY(m00_axis_tready),
+	    .ready_in(ready_in),
+        .valid_out(valid_out),
+        .data_out(signal_out)
 	);
 
 	// Add user logic here
     Pilot_Top pilot(
-       .pilot_inserted (pilot_flag),
-       .error (error)
+        .clk(s00_axis_aclk),
+        .rst(s00_axis_aresetn),
+        
+       .pilot_inserted (pilot_flag_wire),
+       .error (error_wire),
+       
+       .signal_in (signal_in), 
+       .signal_out (signal_out),
+       
+       .frame_length (frame_length),
+       .pilot_interval (pilot_interval),
+       .pilot_value (pilot_value),
+       
+       .ready_out (ready_out),
+       .ready_in (ready_in),
+       .valid_out (valid_out),
+       .valid_in (valid_in)
     );
     
 	// User logic ends

@@ -32,7 +32,7 @@ module qam_4(
 reg [31:0] signal_out_mod;
 
 always @ (posedge clk) begin
-        if (rst) begin
+        if (!rst) begin
             signal_out_mod <= 0;
             ready <= 1'b1;
         end

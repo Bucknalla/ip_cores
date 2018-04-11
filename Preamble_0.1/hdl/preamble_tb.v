@@ -32,11 +32,11 @@ reg [31:0] frame_length;
 
 wire [31:0] signal_out;
 
-wire valid_in;
+reg valid_in;
 wire ready_out;
 
 wire valid_out;
-wire ready_in;
+reg ready_in;
 
 wire error;
 wire preamble_flag;
@@ -96,6 +96,8 @@ begin
     rst = 1;
     counter = 0;
     signal_in = 0;
+    ready_in = 1;
+    valid_in = 1;
     #100;  
     rst = 0;
     repeat(1000)

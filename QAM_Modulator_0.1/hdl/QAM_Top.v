@@ -46,7 +46,7 @@ assign signal_out = (qam == 0) ? signal_out_2 :
                                             0;
                     
 always @ (posedge clk) begin
-    if (rst) begin
+    if (!rst) begin
         ready_out <= 0;
         valid_out <= 0;
         bit_counter <= 0;
@@ -55,7 +55,7 @@ always @ (posedge clk) begin
         {select_qam_2,select_qam_4,select_qam_16, bit_shift} <= 6'b100001; 
     end
     else if (ready_in & valid_in) begin
-        
+        error <= 0;
         if (bit_counter >= 32) begin
             ready_out <= 1;   
             bit_counter <= 1;
@@ -83,10 +83,11 @@ always @ (posedge clk) begin
         endcase
         
     end
-    else begin
-        valid_out <= 0;
-        error <= 1;
-    end
+//    else begin
+//        valid_out <= 0;
+//        ready_out <= 1;
+//        error <= 1;
+//    end
 end
     
     

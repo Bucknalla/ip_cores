@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Tue Apr 10 14:41:19 2018
+# Process ID: 11113
+# Current directory: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/fifo_generator_0_synth_1
+# Command line: vivado -log fifo_generator_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_0.tcl
+# Log file: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/fifo_generator_0_synth_1/fifo_generator_0.vds
+# Journal file: /home/alex/vivado/ip_repo/edit_Cyclic_Prefix_v0_1.runs/fifo_generator_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source fifo_generator_0.tcl -notrace

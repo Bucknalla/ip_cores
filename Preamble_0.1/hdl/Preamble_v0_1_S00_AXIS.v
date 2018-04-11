@@ -30,8 +30,19 @@
 		// Indicates boundary of last packet
 		input wire  S_AXIS_TLAST,
 		// Data is in valid
-		input wire  S_AXIS_TVALID
+		input wire  S_AXIS_TVALID,
+		
+		output wire valid_in,
+		
+		input wire ready_out,
+		
+		output wire [C_S_AXIS_TDATA_WIDTH-1 : 0] data_in
 	);
+	
+    assign data_in = S_AXIS_TDATA;	
+	assign valid_in = S_AXIS_TVALID;
+	assign S_AXIS_TREADY = ready_out;
+	
 	// function called clogb2 that returns an integer which has the 
 	// value of the ceiling of the log base 2.
 	function integer clogb2 (input integer bit_depth);
@@ -67,7 +78,7 @@
 	  reg writes_done;
 	// I/O Connections assignments
 
-	assign S_AXIS_TREADY	= axis_tready;
+//	assign S_AXIS_TREADY	= axis_tready;
 	// Control state machine implementation
 	always @(posedge S_AXIS_ACLK) 
 	begin  
@@ -162,11 +173,11 @@
 
 	// Add user logic here
 	
-    preamble pre (
-    	.signal_in(s00_axis_tdata),  // Slave AXUS Incoming Data
-        .valid_in(s00_axis_tvalid),  // Slave AXIS Valid Incoming Data
-        .ready_out(s00_axis_tready)   // Slave AXIS Ready to Receive Incoming Data         
-    );
+//    preamble pre (
+//    	.signal_in(s00_axis_tdata),  // Slave AXUS Incoming Data
+//        .valid_in(s00_axis_tvalid),  // Slave AXIS Valid Incoming Data
+//        .ready_out(s00_axis_tready)   // Slave AXIS Ready to Receive Incoming Data         
+//    );
     
 
 	// User logic ends

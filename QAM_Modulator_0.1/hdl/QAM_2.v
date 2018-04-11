@@ -30,7 +30,7 @@ module qam_2(
     );
     
 always @ (posedge clk) begin
-        if (rst) begin
+        if (!rst) begin
             signal_out <= 0;
             ready <= 1'b0;
         end

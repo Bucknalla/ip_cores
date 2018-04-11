@@ -78,8 +78,14 @@
     output wire  S_AXI_RVALID,
     // Read ready. This signal indicates that the master can
         // accept the read data and response information.
-    input wire  S_AXI_RREADY
+    input wire  S_AXI_RREADY,
+    
+    output wire [C_S_AXI_DATA_WIDTH-1 : 0] frame_length,
+    output wire [C_S_AXI_DATA_WIDTH-1 : 0] pilot_interval,
+    output wire [C_S_AXI_DATA_WIDTH-1 : 0] pilot_value
 );
+
+
 
 // AXI4LITE signals
 reg [C_S_AXI_ADDR_WIDTH-1 : 0]     axi_awaddr;
@@ -112,6 +118,10 @@ wire     slv_reg_rden;
 wire     slv_reg_wren;
 reg [C_S_AXI_DATA_WIDTH-1:0]     reg_data_out;
 integer     byte_index;
+
+assign frame_length = slv_reg0;
+assign pilot_interval = slv_reg1;
+assign pilot_value = slv_reg2;
 
 // I/O Connections assignments
 
@@ -214,8 +224,8 @@ begin
     begin
       slv_reg0 <= 512; // Frame Length
       slv_reg1 <= 128; // Pilot Interval
-      slv_reg2 <= 32'h1; // Pilot Value
-      slv_reg3 <= 0; // Address Register
+      slv_reg2 <= 10; // Pilot Value
+      slv_reg3 <= 32'h00000001; // Address Register
     end 
   else begin
     if (slv_reg_wren)
@@ -392,11 +402,11 @@ end
 
 // Add user logic here
 
-Pilot_Top pilot(
-    .frame_length (slv_reg0[12:0]),
-    .pilot_interval (slv_reg1[12:0]),
-    .pilot_value (slv_reg2[31:0])
-     );
+//Pilot_Top pilot(
+//    .frame_length (slv_reg0[12:0]),
+//    .pilot_interval (slv_reg1[12:0]),
+//    .pilot_value (slv_reg2[31:0])
+//     );
     
     
     // User logic ends

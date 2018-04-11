@@ -55,8 +55,8 @@
 		input wire  s00_axis_aresetn,
 		output wire  s00_axis_tready,
 		input wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] s00_axis_tdata,
-		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
-		input wire  s00_axis_tlast,
+//		input wire [(C_S00_AXIS_TDATA_WIDTH/8)-1 : 0] s00_axis_tstrb,
+//		input wire  s00_axis_tlast,
 		input wire  s00_axis_tvalid,
 
 		// Ports of Axi Master Bus Interface M00_AXIS
@@ -64,10 +64,26 @@
 		input wire  m00_axis_aresetn,
 		output wire  m00_axis_tvalid,
 		output wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] m00_axis_tdata,
-		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
-		output wire  m00_axis_tlast,
+//		output wire [(C_M00_AXIS_TDATA_WIDTH/8)-1 : 0] m00_axis_tstrb,
+//		output wire  m00_axis_tlast,
 		input wire  m00_axis_tready
 	);
+	
+	wire clk;
+	wire rst;
+	
+	wire [2:0] qam_wire;
+	wire qam_ready_out;
+	wire qam_valid_in;
+	wire qam_ready_in;
+	wire qam_valid_out;
+    wire [C_S00_AXIS_TDATA_WIDTH-1 : 0] qam_data_in;
+    wire [C_M00_AXIS_TDATA_WIDTH-1 : 0] qam_data_out;
+
+    
+    assign clk = s00_axis_aclk;
+    assign rst = s00_axis_aresetn;
+
 // Instantiation of Axi Bus Interface S00_AXI
 	QAM_Modulator_v0_1_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
@@ -93,7 +109,8 @@
 		.S_AXI_RDATA(s00_axi_rdata),
 		.S_AXI_RRESP(s00_axi_rresp),
 		.S_AXI_RVALID(s00_axi_rvalid),
-		.S_AXI_RREADY(s00_axi_rready)
+		.S_AXI_RREADY(s00_axi_rready),
+		.QAM(qam_wire)
 	);
 
 // Instantiation of Axi Bus Interface S00_AXIS
@@ -104,9 +121,13 @@
 		.S_AXIS_ARESETN(s00_axis_aresetn),
 		.S_AXIS_TREADY(s00_axis_tready),
 		.S_AXIS_TDATA(s00_axis_tdata),
-		.S_AXIS_TSTRB(s00_axis_tstrb),
-		.S_AXIS_TLAST(s00_axis_tlast),
-		.S_AXIS_TVALID(s00_axis_tvalid)
+//		.S_AXIS_TSTRB(s00_axis_tstrb),
+//		.S_AXIS_TLAST(s00_axis_tlast),
+		.S_AXIS_TVALID(s00_axis_tvalid),
+		
+		.qam_ready_out (qam_ready_out),
+		.qam_valid_in (qam_valid_in),
+        .qam_data_in (qam_data_in)
 	);
 
 // Instantiation of Axi Bus Interface M00_AXIS
@@ -118,17 +139,30 @@
 		.M_AXIS_ARESETN(m00_axis_aresetn),
 		.M_AXIS_TVALID(m00_axis_tvalid),
 		.M_AXIS_TDATA(m00_axis_tdata),
-		.M_AXIS_TSTRB(m00_axis_tstrb),
-		.M_AXIS_TLAST(m00_axis_tlast),
-		.M_AXIS_TREADY(m00_axis_tready)
+//		.M_AXIS_TSTRB(m00_axis_tstrb),
+//		.M_AXIS_TLAST(m00_axis_tlast),
+		.M_AXIS_TREADY(m00_axis_tready),
+		
+		.qam_data_out(qam_data_out),
+		.qam_valid_out(qam_valid_out),
+		.qam_ready_in(qam_ready_in)
 	);
 
 	// Add user logic here
-        qam_top qam(
-        .clk(s00_axi_aclk),
-        .rst(s00_axi_aresetn),
-        .error(error)
-    );
-	// User logic ends
+	
+    qam_top qam(
+       .clk (clk),
+       .rst (rst),
+       .ready_out (qam_ready_out),
+       .valid_in (qam_valid_in),
+       .signal_in (qam_data_in),
+       .signal_out (qam_data_out),
+       .valid_out (qam_valid_out),
+       .ready_in (qam_ready_in),
+       .error (error),
+       .qam (qam_wire)
+     );
+        
+  	// User logic ends
 
 	endmodule

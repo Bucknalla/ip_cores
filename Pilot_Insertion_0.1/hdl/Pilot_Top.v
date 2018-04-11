@@ -34,7 +34,7 @@ module Pilot_Top(
     output reg valid_out,
     input valid_in,
     
-    output reg error,
+    output reg error = 0,
     output reg pilot_inserted,
     output reg frame_end = 0
 );
@@ -43,7 +43,7 @@ reg [12:0] cnt_frame = 0;
 reg [12:0] cnt_pilot = 0;
 
 always @ (posedge clk) begin
-    if(rst) begin
+    if(!rst) begin
         cnt_pilot <= 0;
         cnt_frame <= 0;
         pilot_inserted <= 0;
@@ -54,9 +54,8 @@ always @ (posedge clk) begin
     end 
     else if (ready_in & valid_in) begin
         valid_out <= 1;
+        error <= 0;
 
-        
-        
         if(cnt_frame >= (frame_length - 1)) begin
             cnt_frame <= 0;
             frame_end <= 1;
@@ -108,7 +107,9 @@ always @ (posedge clk) begin
         
     end
     else begin
-        valid_out <= 0;
+        error <= 1;
+        ready_out <= 1;
+//        valid_out <= 0;
     end
 end
 

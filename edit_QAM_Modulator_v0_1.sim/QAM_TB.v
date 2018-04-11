@@ -58,11 +58,11 @@ end
 // Setup RST
 
 initial begin
-    rst = 1;
+    rst = 0;
     ready_in = 1;
     valid_in = 1;
     signal_in = 32'b11101010101010101010101010101010;
-    #20 rst = 0;
+    #20 rst = 1;
 end
 
 always begin

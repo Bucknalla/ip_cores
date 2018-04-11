@@ -78,7 +78,12 @@
 		output wire  S_AXI_RVALID,
 		// Read ready. This signal indicates that the master can
     		// accept the read data and response information.
-		input wire  S_AXI_RREADY
+		input wire  S_AXI_RREADY,
+		
+		output wire [31:0] preamble_value,
+		output wire [31:0] preamble_length,
+		output wire [31:0] frame_length	      
+
 	);
 
 	// AXI4LITE signals
@@ -123,6 +128,11 @@
 	assign S_AXI_RDATA	= axi_rdata;
 	assign S_AXI_RRESP	= axi_rresp;
 	assign S_AXI_RVALID	= axi_rvalid;
+			
+    assign preamble_value = slv_reg0;
+    assign preamble_length = slv_reg1;
+    assign frame_length = slv_reg2;
+
 	// Implement axi_awready generation
 	// axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 	// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
@@ -391,11 +401,11 @@
 	end    
 
 	// Add user logic here
-    preamble pre (
-        .preamble_value(slv_reg0),
-        .preamble_length(slv_reg1),
-        .frame_length(slv_reg2)   
-    );
+//    preamble pre (
+//        .preamble_value(slv_reg0),
+//        .preamble_length(slv_reg1),
+//        .frame_length(slv_reg2)   
+//    );
 
 	// User logic ends
 

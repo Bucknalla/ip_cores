@@ -30,8 +30,20 @@
         // Indicates boundary of last packet
         input wire  S_AXIS_TLAST,
         // Data is in valid
-        input wire  S_AXIS_TVALID
+        input wire  S_AXIS_TVALID,
+        
+        input wire qam_ready_out,
+        output wire [C_S_AXIS_TDATA_WIDTH-1 : 0] qam_data_in,
+        output wire qam_valid_in
+        
     );
+    
+    assign qam_data_in = S_AXIS_TDATA;
+    assign S_AXIS_TREADY = qam_ready_out;
+    assign qam_valid_in = S_AXIS_TVALID;
+    
+    
+    
     // function called clogb2 that returns an integer which has the 
     // value of the ceiling of the log base 2.
     function integer clogb2 (input integer bit_depth);
@@ -162,12 +174,16 @@
 
     // Add user logic here
     
-    qam_top qam(
-       .clk (S_AXIS_ACLK),
-       .rst (S_AXIS_ARESETN),
-       .ready (S_AXIS_TREADY),
-       .signal_in (S_AXIS_TDATA)
-    );
+//    qam_top qam(
+//       .clk (S_AXIS_ACLK),
+//       .rst (S_AXIS_ARESETN),
+//       .ready_out (S_AXIS_TREADY),
+//       .valid_in (S_AXIS_TVALID),
+//       .signal_in (S_AXIS_TDATA),
+//       .signal_out (M_AXIS_TDATA),
+//       .valid_out (M_AXIS_TVALID),
+//       .ready_in (M_AXIS_TREADY)
+//    );
 
     // User logic ends
 

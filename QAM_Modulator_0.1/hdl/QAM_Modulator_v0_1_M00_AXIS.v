@@ -32,7 +32,13 @@
         // TLAST indicates the boundary of a packet.
         output wire  M_AXIS_TLAST,
         // TREADY indicates that the slave can accept a transfer in the current cycle.
-        input wire  M_AXIS_TREADY
+        input wire  M_AXIS_TREADY,
+        
+        input wire [C_M_AXIS_TDATA_WIDTH-1 : 0] qam_data_out,
+        
+        input wire qam_valid_out,
+        
+        output wire qam_ready_in
     );
     //Total number of output data.
     // Total number of output data                                                 
@@ -87,8 +93,9 @@
 
     // I/O Connections assignments
 
-//    assign M_AXIS_TVALID    = axis_tvalid_delay;
-//    assign M_AXIS_TDATA    = stream_data_out;
+    assign qam_ready_in = M_AXIS_TREADY;
+    assign M_AXIS_TVALID    = qam_valid_out;
+    assign M_AXIS_TDATA    = qam_data_out;
     assign M_AXIS_TLAST    = axis_tlast_delay;
     assign M_AXIS_TSTRB    = {(C_M_AXIS_TDATA_WIDTH/8){1'b1}};
 
@@ -223,10 +230,11 @@
 
     // Add user logic here
     
-    qam_top qam(
-       .signal_out (M_AXIS_TDATA),
-       .valid (M_AXIS_TVALID)
-    );
+//    qam_top qam(
+//       .signal_out (M_AXIS_TDATA),
+//       .valid_out (M_AXIS_TVALID),
+//       .ready_in (M_AXIS_TREADY)
+//    );
 
     // User logic ends
 

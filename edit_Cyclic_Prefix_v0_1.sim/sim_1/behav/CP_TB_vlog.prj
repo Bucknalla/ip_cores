@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  "../../../edit_Cyclic_Prefix_v0_1.srcs/sources_1/ip/fifo_generator_0/sim/fifo_generator_0.v"
+verilog xil_defaultlib  "../../../edit_Cyclic_Prefix_v0_1.ip_user_files/ip/fifo_generator_0/sim/fifo_generator_0.v"
 verilog xil_defaultlib  "../../../Cyclic_Prefix_0.1/hdl/CP_Top.v"
 verilog xil_defaultlib  "../../../edit_Cyclic_Prefix_v0_1.srcs/sim_1/new/CP_TB.v"
 

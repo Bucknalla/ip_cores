@@ -1,7 +1,7 @@
-Running: xsim.dir/qam_mod_tb_behav/xsimk -simmode gui -wdb qam_mod_tb_behav.wdb -simrunnum 0 -socket 46399
+Running: xsim.dir/qam_mod_tb_behav/xsimk -simmode gui -wdb qam_mod_tb_behav.wdb -simrunnum 0 -socket 32981
 Design successfully loaded
 Design Loading Memory Usage: 49592 KB (Peak: 49620 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading CPU Usage: 30 ms
 Simulation completed
-Simulation Memory Usage: 133340 KB (Peak: 196864 KB)
-Simulation CPU Usage: 10 ms
+Simulation Memory Usage: 132312 KB (Peak: 196864 KB)
+Simulation CPU Usage: 50 ms

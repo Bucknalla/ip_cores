@@ -32,8 +32,19 @@
             // TLAST indicates the boundary of a packet.
             output wire  M_AXIS_TLAST,
             // TREADY indicates that the slave can accept a transfer in the current cycle.
-            input wire  M_AXIS_TREADY
+            input wire  M_AXIS_TREADY,
+                    
+            input wire valid_out,
+            
+            output wire ready_in,
+            
+            input wire [C_M_AXIS_TDATA_WIDTH-1 : 0] data_out
         );
+        
+        assign M_AXIS_TVALID = valid_out;
+        assign ready_in = M_AXIS_TREADY;
+        assign M_AXIS_TDATA = data_out;
+        
         //Total number of output data.
         // Total number of output data                                                 
         localparam NUMBER_OF_OUTPUT_WORDS = 8;                                               
@@ -223,10 +234,10 @@
     
         // Add user logic here
         
-        Pilot_Top pilot(
-           .signal_out (M_AXIS_TDATA),
-           .valid_out (M_AXIS_TVALID)
-        );
+//        Pilot_Top pilot(
+//           .signal_out (M_AXIS_TDATA),
+//           .valid_out (M_AXIS_TVALID)
+//        );
     
         // User logic ends
     

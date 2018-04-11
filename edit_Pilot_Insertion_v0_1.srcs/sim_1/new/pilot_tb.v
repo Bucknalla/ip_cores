@@ -74,23 +74,23 @@ end
 // Setup RST
 
 initial begin
-    rst = 1;
+    rst = 0;
     frame_length = 64;
     pilot_interval = 8;
     pilot_value = 32'b0;
     ready_in = 1;
     valid_in = 1;
     signal_in = 32'b11101010111010110001010100011100;
-    #20 rst = 0;
+    #20 rst = 1;
     #100 valid_in = 0;
     #30 valid_in = 1;
 end
 
-// always begin
-//     #10 if(ready_out) begin
-//         signal_in = signal_in - 1;
-//     end
-// end
+ always begin
+     #10 if(ready_out) begin
+         signal_in = signal_in - 1;
+     end
+ end
 
 // Main Functionality
 

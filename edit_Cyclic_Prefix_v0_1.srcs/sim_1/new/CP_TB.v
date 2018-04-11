@@ -26,11 +26,13 @@ reg clk;
 reg [15:0] counter;
 reg rst; 
 reg [31:0] signal_in; 
-reg [31:0] cp_length;
-reg [5:0] frame_length;
+reg [12:0] cp_length;
+reg [12:0] frame_length;
 wire [31:0] signal_out;
-wire ready;
-wire valid;
+wire ready_out;
+reg valid_in;
+reg ready_in;
+wire valid_out;
 wire error;
 wire cp_flag;
     
@@ -41,8 +43,10 @@ CP_Top CP_DUT(
     .cp_length (cp_length),
     .frame_length (frame_length),
     .signal_out (signal_out),
-    .ready (ready),
-    .valid (valid),
+    .ready_in (ready_in),
+    .valid_in (valid_out),
+    .valid_out (valid_out),
+    .ready_out (ready_out),
     .error (error),
     .cp_flag (cp_flag)
 );
@@ -83,6 +87,8 @@ begin
     rst = 1;
     counter = 0;
     signal_in = 0;
+    ready_in = 1;
+    valid_in = 1;
     #100;  
     rst = 0;
     repeat(1000)

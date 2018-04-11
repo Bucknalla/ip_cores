@@ -15,6 +15,7 @@
 )
 (
     // Users to add ports here
+    output wire [2:0] QAM,
 
     // User ports ends
     // Do not modify the ports beyond this line
@@ -123,6 +124,7 @@ assign S_AXI_ARREADY    = axi_arready;
 assign S_AXI_RDATA    = axi_rdata;
 assign S_AXI_RRESP    = axi_rresp;
 assign S_AXI_RVALID    = axi_rvalid;
+assign QAM              = slv_reg0;
 // Implement axi_awready generation
 // axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 // S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
@@ -392,9 +394,9 @@ end
 
 // Add user logic here
 
-qam_top qam(
-    .qam (slv_reg0[2:0])
-        );
+//qam_top qam(
+//    .qam (slv_reg0[2:0])
+//        );
     
     
     // User logic ends

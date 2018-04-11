@@ -30,8 +30,19 @@
         // Indicates boundary of last packet
         input wire  S_AXIS_TLAST,
         // Data is in valid
-        input wire  S_AXIS_TVALID
+        input wire  S_AXIS_TVALID,
+        
+        output wire valid_in,
+        
+        input wire ready_out,
+        
+        output wire [C_S_AXIS_TDATA_WIDTH-1 : 0] data_in
     );
+    
+    assign valid_in = S_AXIS_TVALID;
+    assign S_AXIS_TREADY = ready_out;
+    assign data_in = S_AXIS_TDATA;
+    
     // function called clogb2 that returns an integer which has the 
     // value of the ceiling of the log base 2.
     function integer clogb2 (input integer bit_depth);
@@ -162,12 +173,12 @@
 
     // Add user logic here
     
-    Pilot_Top pilot(
-       .clk (S_AXIS_ACLK),
-       .rst (S_AXIS_ARESETN),
-       .ready_in (S_AXIS_TREADY),
-       .signal_in (S_AXIS_TDATA)
-    );
+//    Pilot_Top pilot(
+//       .clk (S_AXIS_ACLK),
+//       .rst (S_AXIS_ARESETN),
+//       .ready_in (S_AXIS_TREADY),
+//       .signal_in (S_AXIS_TDATA)
+//    );
 
     // User logic ends
 

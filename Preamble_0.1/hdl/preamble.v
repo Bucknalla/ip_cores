@@ -38,19 +38,18 @@ module preamble(
     output  reg [31:0]  signal_out,
 
     output  reg         error,
-    output              preamble_flag);
+    output  reg         preamble_flag);
 
 reg [13:0]  cnt             = 0;
 reg         new_frame       = 0;
 reg         rst_state       = 0;
-reg         preamble_flag   = 0;
 
 always @ (posedge clk) begin
 
-    if (rst) begin
+    if (!rst) begin
         cnt             <= 0;
         new_frame       <= 1;
-        ready_out        <= 0;
+        ready_out       <= 0;
         valid_out       <= 0;
         preamble_flag   <= 0;
         error           <= 0;
@@ -58,6 +57,7 @@ always @ (posedge clk) begin
     end
 
     else if(ready_in & valid_in) begin
+        error <= 0;
         if (new_frame == 1) begin
 
             valid_out   <= 1;
@@ -98,18 +98,17 @@ always @ (posedge clk) begin
                 cnt             <= cnt + 1;
                 signal_out      <= signal_in;
             end
-
+            
         end
-
-        else begin
-
-            valid_out   <= 0;
-            error       <= 1;
-
-        end
-
+        
     end
-
+    
+//    else begin
+//        ready_out   <= 1;
+//        valid_out   <= 0;
+//        error       <= 1;
+//    end
+    
 end 
 
 

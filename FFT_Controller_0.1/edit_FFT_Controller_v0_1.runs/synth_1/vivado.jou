@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Apr  9 14:36:41 2018
+# Process ID: 13101
+# Current directory: /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ip_repo/edit_FFT_Controller_v0_1.runs/synth_1
+# Command line: vivado -log FFT_Controller_v0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FFT_Controller_v0_1.tcl
+# Log file: /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ip_repo/edit_FFT_Controller_v0_1.runs/synth_1/FFT_Controller_v0_1.vds
+# Journal file: /home/alex/GitHub/IFFT_Verilog/Verilog/OFDM/ip_repo/edit_FFT_Controller_v0_1.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source FFT_Controller_v0_1.tcl -notrace

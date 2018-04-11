@@ -61,7 +61,6 @@ module fifo_generator_0 (
   rd_en,
   dout,
   full,
-  wr_ack,
   empty,
   data_count
 );
@@ -79,16 +78,15 @@ input wire rd_en;
 output wire [31 : 0] dout;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE FULL" *)
 output wire full;
-output wire wr_ack;
 (* X_INTERFACE_INFO = "xilinx.com:interface:fifo_read:1.0 FIFO_READ EMPTY" *)
 output wire empty;
-output wire [13 : 0] data_count;
+output wire [12 : 0] data_count;
 
   fifo_generator_v13_1_3 #(
     .C_COMMON_CLOCK(1),
     .C_SELECT_XPM(0),
     .C_COUNT_TYPE(0),
-    .C_DATA_COUNT_WIDTH(14),
+    .C_DATA_COUNT_WIDTH(13),
     .C_DEFAULT_VALUE("BlankString"),
     .C_DIN_WIDTH(32),
     .C_DOUT_RST_VAL("0"),
@@ -109,7 +107,7 @@ output wire [13 : 0] data_count;
     .C_HAS_SRST(1),
     .C_HAS_UNDERFLOW(0),
     .C_HAS_VALID(0),
-    .C_HAS_WR_ACK(1),
+    .C_HAS_WR_ACK(0),
     .C_HAS_WR_DATA_COUNT(0),
     .C_HAS_WR_RST(0),
     .C_IMPLEMENTATION_TYPE(0),
@@ -118,16 +116,16 @@ output wire [13 : 0] data_count;
     .C_MIF_FILE_NAME("BlankString"),
     .C_OPTIMIZATION_MODE(0),
     .C_OVERFLOW_LOW(0),
-    .C_PRELOAD_LATENCY(0),
-    .C_PRELOAD_REGS(1),
+    .C_PRELOAD_LATENCY(1),
+    .C_PRELOAD_REGS(0),
     .C_PRIM_FIFO_TYPE("8kx4"),
-    .C_PROG_EMPTY_THRESH_ASSERT_VAL(4),
-    .C_PROG_EMPTY_THRESH_NEGATE_VAL(5),
+    .C_PROG_EMPTY_THRESH_ASSERT_VAL(2),
+    .C_PROG_EMPTY_THRESH_NEGATE_VAL(3),
     .C_PROG_EMPTY_TYPE(0),
-    .C_PROG_FULL_THRESH_ASSERT_VAL(8191),
-    .C_PROG_FULL_THRESH_NEGATE_VAL(8190),
+    .C_PROG_FULL_THRESH_ASSERT_VAL(8190),
+    .C_PROG_FULL_THRESH_NEGATE_VAL(8189),
     .C_PROG_FULL_TYPE(0),
-    .C_RD_DATA_COUNT_WIDTH(14),
+    .C_RD_DATA_COUNT_WIDTH(13),
     .C_RD_DEPTH(8192),
     .C_RD_FREQ(1),
     .C_RD_PNTR_WIDTH(13),
@@ -138,10 +136,10 @@ output wire [13 : 0] data_count;
     .C_USE_PIPELINE_REG(0),
     .C_POWER_SAVING_MODE(0),
     .C_USE_FIFO16_FLAGS(0),
-    .C_USE_FWFT_DATA_COUNT(1),
+    .C_USE_FWFT_DATA_COUNT(0),
     .C_VALID_LOW(0),
     .C_WR_ACK_LOW(0),
-    .C_WR_DATA_COUNT_WIDTH(14),
+    .C_WR_DATA_COUNT_WIDTH(13),
     .C_WR_DEPTH(8192),
     .C_WR_FREQ(1),
     .C_WR_PNTR_WIDTH(13),
@@ -313,7 +311,7 @@ output wire [13 : 0] data_count;
     .dout(dout),
     .full(full),
     .almost_full(),
-    .wr_ack(wr_ack),
+    .wr_ack(),
     .overflow(),
     .empty(empty),
     .almost_empty(),
