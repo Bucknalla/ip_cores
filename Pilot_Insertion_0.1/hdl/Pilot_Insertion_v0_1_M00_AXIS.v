@@ -38,10 +38,13 @@
             
             output wire ready_in,
             
-            input wire [C_M_AXIS_TDATA_WIDTH-1 : 0] data_out
+            input wire [C_M_AXIS_TDATA_WIDTH-1 : 0] data_out,
+            
+            input wire frame_last
         );
         
         assign M_AXIS_TVALID = valid_out;
+        assign M_AXIS_TLAST = frame_last;
         assign ready_in = M_AXIS_TREADY;
         assign M_AXIS_TDATA = data_out;
         
@@ -100,7 +103,7 @@
     
     //    assign M_AXIS_TVALID    = axis_tvalid_delay;
     //    assign M_AXIS_TDATA    = stream_data_out;
-        assign M_AXIS_TLAST    = axis_tlast_delay;
+//        assign M_AXIS_TLAST    = 0;
         assign M_AXIS_TSTRB    = {(C_M_AXIS_TDATA_WIDTH/8){1'b1}};
     
     

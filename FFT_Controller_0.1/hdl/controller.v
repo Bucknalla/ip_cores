@@ -25,8 +25,8 @@ module controller(
     input rst,
     
     input [31:0] slv_reg0, // NFFT
-    input [31:0] slv_reg1, // 
-    input [31:0] slv_reg2, // 
+    input [31:0] slv_reg1, // CP_LEN
+    input [31:0] slv_reg2, // FWD/INV
     input [31:0] slv_reg3, // Address Register
     
     output reg valid_out,
@@ -36,13 +36,13 @@ module controller(
     );
     
 always @ (posedge clk) begin
-    if (rst) begin
+    if (!rst) begin
         valid_out <= 0;
         data_out <= 0;    
     end
     else if(ready_in) begin
         valid_out <= 1;
-        data_out <= {5'b0,slv_reg2[2:0],1'b0,slv_reg1[6:0],3'b0,slv_reg0[4:0]}; // 
+        data_out <= {7'b0,slv_reg2[0:0],1'b0,slv_reg1[6:0],3'b0,slv_reg0[4:0]}; // 
     end
 
 end    

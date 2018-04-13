@@ -47,7 +47,7 @@ always @ (posedge clk) begin
         cnt_pilot <= 0;
         cnt_frame <= 0;
         pilot_inserted <= 0;
-        frame_end <= 0;
+        frame_end <= 1;
         ready_out <= 0;
         valid_out <= 0;
         error <= 0;
@@ -62,7 +62,7 @@ always @ (posedge clk) begin
         end
         else if(cnt_frame == 0) begin
             cnt_frame <= cnt_frame + 1;
-            frame_end <= 1;
+//            frame_end <= 1;
         end
         else begin
             cnt_frame <= cnt_frame + 1;
@@ -107,7 +107,7 @@ always @ (posedge clk) begin
         
     end
     else begin
-        error <= 1;
+//        error <= 1;
         ready_out <= 1;
 //        valid_out <= 0;
     end

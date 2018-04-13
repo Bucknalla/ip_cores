@@ -73,6 +73,8 @@
 	
 	wire pilot_flag_wire, error_wire;
     
+    wire frame_end;
+    
     wire [31:0] signal_in, signal_out;
     
     wire [31:0] frame_length, pilot_interval, pilot_value;
@@ -140,7 +142,8 @@
 		.M_AXIS_TREADY(m00_axis_tready),
 	    .ready_in(ready_in),
         .valid_out(valid_out),
-        .data_out(signal_out)
+        .data_out(signal_out),
+        .frame_last(frame_end)
 	);
 
 	// Add user logic here
@@ -150,6 +153,7 @@
         
        .pilot_inserted (pilot_flag_wire),
        .error (error_wire),
+       .frame_end(frame_end),
        
        .signal_in (signal_in), 
        .signal_out (signal_out),

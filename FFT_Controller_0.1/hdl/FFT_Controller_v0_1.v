@@ -56,6 +56,15 @@
 		output wire  m00_axis_tlast,
 		input wire  m00_axis_tready
 	);
+	
+	wire [31:0] slv_reg0, slv_reg1, slv_reg2, slv_reg3;
+	
+	wire [23:0] data_out;
+	
+	wire ready_in, valid_out;
+	
+	
+	
 // Instantiation of Axi Bus Interface S00_AXI
 	FFT_Controller_v0_1_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
@@ -81,7 +90,11 @@
 		.S_AXI_RDATA(s00_axi_rdata),
 		.S_AXI_RRESP(s00_axi_rresp),
 		.S_AXI_RVALID(s00_axi_rvalid),
-		.S_AXI_RREADY(s00_axi_rready)
+		.S_AXI_RREADY(s00_axi_rready),
+		.slv_reg0_out (slv_reg0),
+        .slv_reg1_out (slv_reg1),
+        .slv_reg2_out (slv_reg2),
+        .slv_reg3_out (slv_reg3)
 	);
 
 // Instantiation of Axi Bus Interface M00_AXIS
@@ -95,14 +108,24 @@
 		.M_AXIS_TDATA(m00_axis_tdata),
 //		.M_AXIS_TSTRB(m00_axis_tstrb),
 		.M_AXIS_TLAST(m00_axis_tlast),
-		.M_AXIS_TREADY(m00_axis_tready)
+		.M_AXIS_TREADY(m00_axis_tready),
+		.data_out(data_out),
+		.ready_in(ready_in),
+		.valid_out(valid_out)
 	);
 
 	// Add user logic here
 	
 	controller axi (
-	   .clk(s00_axi_aclk),
-	   .rst(s00_axi_aresetn)
+	   .clk(m00_axis_aclk),
+	   .rst(m00_axis_aresetn),
+       .slv_reg0 (slv_reg0),
+       .slv_reg1 (slv_reg1),
+       .slv_reg2 (slv_reg2),
+       .slv_reg3 (slv_reg3),
+       .data_out (data_out),
+       .ready_in (ready_in),
+       .valid_out (valid_out)
 	);
 
 	// User logic ends

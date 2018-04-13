@@ -85,7 +85,7 @@ always @ (posedge clk) begin
     end
 //    else begin
 //        valid_out <= 0;
-//        ready_out <= 1;
+        ready_out <= 0;
 //        error <= 1;
 //    end
 end

@@ -78,7 +78,9 @@
 		output wire  S_AXI_RVALID,
 		// Read ready. This signal indicates that the master can
     		// accept the read data and response information.
-		input wire  S_AXI_RREADY
+		input wire  S_AXI_RREADY,
+		
+		output wire [31:0] slv_reg0_out, slv_reg1_out, slv_reg2_out, slv_reg3_out
 	);
 
 	// AXI4LITE signals
@@ -127,6 +129,11 @@
 	// axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 	// S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
 	// de-asserted when reset is low.
+	
+	assign slv_reg0_out = slv_reg0;
+    assign slv_reg1_out = slv_reg1;
+    assign slv_reg2_out = slv_reg2;
+    assign slv_reg3_out = slv_reg3;
 
 	always @( posedge S_AXI_ACLK )
 	begin
@@ -212,9 +219,9 @@
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )
 	    begin
-	      slv_reg0 <= 0;
-	      slv_reg1 <= 0;
-	      slv_reg2 <= 0;
+	      slv_reg0 <= 5'b01001; // FFT SIZE - 512
+	      slv_reg1 <= 7'b0110110; // CP LENGTH - 64
+	      slv_reg2 <= 1'b1; //FWD/INV -
 	      slv_reg3 <= 0;
 	    end 
 	  else begin
@@ -392,12 +399,12 @@
 
 	// Add user logic here
 
-    controller axi (
-        .slv_reg0 (slv_reg0),
-        .slv_reg1 (slv_reg1),
-        .slv_reg2 (slv_reg2),
-        .slv_reg3 (slv_reg3)
-    );
+//    controller axi (
+//        .slv_reg0 (slv_reg0),
+//        .slv_reg1 (slv_reg1),
+//        .slv_reg2 (slv_reg2),
+//        .slv_reg3 (slv_reg3)
+//    );
 	// User logic ends
 
 	endmodule
