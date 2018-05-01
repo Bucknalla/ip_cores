@@ -23,6 +23,8 @@
 	(
 		// Users to add ports here
         output wire pilot_flag,
+        output wire frame_start,
+        output wire frame_end,
         output wire error,
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -72,9 +74,7 @@
 	
 	
 	wire pilot_flag_wire, error_wire;
-    
-    wire frame_end;
-    
+        
     wire [31:0] signal_in, signal_out;
     
     wire [31:0] frame_length, pilot_interval, pilot_value;
@@ -151,9 +151,9 @@
         .clk(s00_axis_aclk),
         .rst(s00_axis_aresetn),
         
-       .pilot_inserted (pilot_flag_wire),
+       .pilot_inserted (pilot_flag),
        .error (error_wire),
-       .frame_end(frame_end),
+//       .frame_end(frame_end),
        
        .signal_in (signal_in), 
        .signal_out (signal_out),
@@ -166,6 +166,16 @@
        .ready_in (ready_in),
        .valid_out (valid_out),
        .valid_in (valid_in)
+    );
+    
+    frame_counter frame(
+        .clk(s00_axis_aclk),
+        .rst(s00_axis_aresetn),
+        .ready(s00_axis_tvalid),
+        .pilot_flag(pilot_flag),
+        .frame_length(frame_length),
+        .end_frame(frame_end),
+        .start_frame(frame_start)
     );
     
 	// User logic ends
