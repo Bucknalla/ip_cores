@@ -26,6 +26,7 @@ module frame_counter
     input rst,
     input ready,
     input pilot_flag,
+    input event_frame_started,
     input [12:0] frame_length,
     output reg end_frame,
     output reg start_frame
@@ -37,6 +38,9 @@ module frame_counter
         if(!rst) begin
             end_frame <= 0;
             start_frame <= 0;
+            counter <= 0;
+        end
+        else if(event_frame_started) begin
             counter <= 0;
         end
         else if (ready || pilot_flag) begin

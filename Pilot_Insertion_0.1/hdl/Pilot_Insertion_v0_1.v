@@ -26,6 +26,8 @@
         output wire frame_start,
         output wire frame_end,
         output wire error,
+        
+        input wire event_frame_started,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -125,7 +127,8 @@
 		.S_AXIS_TVALID(s00_axis_tvalid),
 		.ready_out(ready_out),
 		.valid_in(valid_in),
-		.data_in(signal_in)
+		.data_in(signal_in),
+		.event_frame_started(event_frame_signal_started)
 	);
 
 // Instantiation of Axi Bus Interface M00_AXIS
@@ -173,6 +176,7 @@
         .rst(s00_axis_aresetn),
         .ready(s00_axis_tvalid),
         .pilot_flag(pilot_flag),
+        .event_frame_started(event_frame_started),
         .frame_length(frame_length),
         .end_frame(frame_end),
         .start_frame(frame_start)

@@ -15,7 +15,6 @@
 )
 (
     // Users to add ports here
-
     // User ports ends
     // Do not modify the ports beyond this line
 
@@ -119,6 +118,7 @@ wire     slv_reg_wren;
 reg [C_S_AXI_DATA_WIDTH-1:0]     reg_data_out;
 integer     byte_index;
 
+
 assign frame_length = slv_reg0;
 assign pilot_interval = slv_reg1;
 assign pilot_value = slv_reg2;
@@ -143,6 +143,7 @@ begin
   if ( S_AXI_ARESETN == 1'b0 )
     begin
       axi_awready <= 1'b0;
+      event_frame_started_reg <= 1'b0;
     end 
   else
     begin    

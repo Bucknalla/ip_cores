@@ -56,7 +56,7 @@ always @ (posedge clk) begin
     end
     else if (ready_in & valid_in) begin
         error <= 0;
-        if (bit_counter >= 32) begin
+        if (bit_counter == 32) begin
             ready_out <= 1;   
             bit_counter <= 1;
             valid_out <= 1;
@@ -85,7 +85,7 @@ always @ (posedge clk) begin
     end
 //    else begin
 //        valid_out <= 0;
-        ready_out <= 0;
+//        ready_out <= 0;
 //        error <= 1;
 //    end
 end
